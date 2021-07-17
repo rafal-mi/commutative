@@ -1,2 +1,0 @@
-# commutative
-Commutative A notes

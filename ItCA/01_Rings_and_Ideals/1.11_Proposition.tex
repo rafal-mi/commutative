@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Proposition 1.11}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+Let $ \textgoth{a} \nsubseteq \textgoth{p}_i \; (1 \leq i \leq n) $ and the hypothesis be true for $n - 1$. For each $i \leq n$, $ \textgoth{a} \nsubseteq \textgoth{p} $ for $ j \neq i $; there are $n - 1$ such $j$'s, so by the induction hypothesis, $ \textgoth{a} \nsubseteq \bigcup\limits_{\substack{ j=1 \\ j \neq i}}^n \textgoth{p}_j $; then there is some $x_i$ in $\textgoth{a}$ that is not in any $\textgoth{p}_j$ for $j \neq i$.
+
+Now let 
+\[
+y = \sum_{i=1}^{n} x_1 \cdots \x_{i - 1} x_{i + 1} \cdots x_n
+\]
+Can the $i$'th term be in $\textgoth{p}_i $? No, since then, as the ideal is prime, we would have $x_j \in \textgoth{p}_i$ for some $j \neq i$. 
+The factor $x_i$ is in every term except $x_1 \cdots \x_{i - 1} x_{i + 1} \cdots x_n$; then
+\[
+x_i z + x_1 \cdots \x_{i - 1} x_{i + 1} \cdots x_n= y \in \textgoth{p}_i  
+\]
+Can $y$ be in $\textgoth{p}_i $? Now the first summand is in the ideal, as is the right side, ten one of factors must be in the ideal, a contradiction to what we observed.
+\end{document}
