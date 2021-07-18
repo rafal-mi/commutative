@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem*{fact}{Fact}
+
+\title{Example 3}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}\\
+1. RINGS AND IDEALS
+\end{center}
+
+\vspace*{10px} 
+
+\begin{fact}
+In a PID, a non-zero prime ideal is maximal.
+\end{fact}
+
+\vspace*{10px} 
+
+Let $y \notin (x)$. Consider the ideal $(x, y) = (z)$. There is $x = az$, $y = bz$, and $cx + dy = z$; it follows that $acz + bdz = z$, and by cancellation, $ac + bd = 1$. Now $cx = z - dy = z - bdz = (1 - bd)z \in (x)$, so it must be one of $z \in (x)$ or $1 - bd \in (x)$; with the first, it would be $y \in (x)$, which is not true, so we stay with the second: $1 - bd \in (x)$. There is $x = a(cx + dy) = acx + ady$, then $ady \in (x)$, then $ad \in (x)$ or $y \in (x)$, but as the second is not true, $ad \in (x)$, whence $a \in (x)$ or $d \in (x)$. If it were $d \in (x)$, then we would have $bd \in (x)$, but $1 + (x) = bd + (x)$; so $d$ cannot be in $(x)$. We are left only with $a \in (x)$, now $a = a'x$, whence $x = az = aa'z$ and cancelling, $1 = aa'z$, then $z$ is a unit, and $(x, y) = (1)$. 
+
+
+\end{document}
