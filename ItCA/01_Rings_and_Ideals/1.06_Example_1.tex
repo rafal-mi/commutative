@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Example 1}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+Irreducible polynomial in $ k[x_1, \dots, x_n] $ is the same as irreducible element (as there is no difference between primitive and non-primitive elements). Then the factorization of $f$ is $f = f$. In a UFD every irreducible element is also a prime element (J.B. Fraleigh, \emph{A First Course in Abstract Algebra 7Ed}). Then $f$ is a prime element:
+\[
+f | gh \Rightarrow f | g \parallel f | h
+\]
+Now
+\[
+gh \in (f) \Rightarrow g \in (f) \parallel h \in (f)
+\]
+which shows that $(f)$ is a prime ideal.
+\end{document}S
