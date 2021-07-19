@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+\newtheorem*{fact}{Fact}
+
+\title{Proposition 1.10}
+
+ \begin{document}
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra} \\
+1 RINGS AND IDEALS
+\end{center}
+
+\vspace*{10px} 
+
+\begin{fact}
+If $z_1 \equiv 1 \pmod{\textgoth{a}}$ and $z_2 \equiv 1 \pmod{\textgoth{a}}$, then $z_1 z_2 \equiv 1 \pmod{\textgoth{a}}$ 
+\end{fact}
+
+$z_1 - 1 = a_1 \in \textgoth{a}$, $z_1 - 1 = a_1 \in \textgoth{a}$; $(z_1 - 1)(z_2 - 1) = a_1 a_3 \in \textgoth{a}$; $z_1 z_2 - z_1 - z_2 + 1 \in \textgoth{a}$; but $- z_2 + 1 \in \textgoth{a}$; now $z_1 z_2 - z_1 \in \textgoth{a}$; $z_1 z_2 \equiv z_1 \equiv 1 \pmod{\textgoth{a}}$; and the relation is transitive...
+
+This fact is also because $A / \textgoth{a}$ is a ring: $z_1 z_2 + \textgoth{a} = (z_1 + \textgoth{a})(z_2 + \textgoth{a}) = (1 + \textgoth{a})(1 + \textgoth{a}) = 1 + \textgoth{a}$.
+
+\vspace*{10px} 
+
+Back in the proof of Proposition 1.10, $x_i = 1 - y_i \equiv 1 \pmod{\textgoth{a}_n}$; $\prod_{i = 1}^{n-1} x_i \equiv 1 \pmod{\textgoth{a}_n}$
+
+\vspace*{10px} 
+
+\begin{fact}
+If for $y \in \textgoth{b}$, $y \equiv 1 \pmod{\textgoth{a}}$, then $\textgoth{a} + \textgoth{b} = (1)$.
+\end{fact}
+
+$y - 1 \in \textgoth{a}$; $y - 1 = x \ in \textgoth{a}$; $x + y = 1$. Now $\textgoth{a}, \textgoth{b}$ are coprime by the remark from the first paragraph on page 7.
+
+\vspace*{10px} 
+
+(ii) $\Rightarrow$: $\phi(x) = (1, 0, \dots, 0) = (1 + \textgoth{a}_1, 0 + \textgoth{a}_2, \dots, 0)$; $x + \textgoth{a}_1 = 1 + \textgoth{a}_1$ and $x + \textgoth{a}_1 = 0 + \textgoth{a}_1$; $x \equiv 1 \pmod{\textgoth{a}_1}$ and $x \equiv 0 \pmod{\textgoth{a}_2}$.
+
+(ii) $\Leftarrow$: Same technique as in (i) to show that $x = \prod (1 - u_i) \equiv 1 \pmod{\textgoth{a}_1}$. As $x \in \textgoth{a}_1$ for $i > 1$, $x \equiv 0 \pmod{\textgoth{a}_1}$.
+
+\end{document}S

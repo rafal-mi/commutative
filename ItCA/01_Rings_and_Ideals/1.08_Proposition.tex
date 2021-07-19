@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem*{fact}{Fact}
+
+\title{Proposition 1.8}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}\\
+1. RINGS AND IDEALS
+\end{center}
+
+\vspace*{10px} 
+
+\begin{fact}
+$a \in \textgoth{p} + (x) \wedge b \in \textgoth{p} + (y) \Rightarrow ab \in \textgoth{p} + (xy)$
+\end{fact}
+
+\vspace*{10px} 
+
+$a = c + dx$ with $c \in \textgoth{p}$, $b = e + fy$ with $e \in \textgoth{p}$; then $ab = (c + dx)(e + fy) = ce + cfy + dex + dfy$; but first three are in $\textgoth{p}$ and last is in $(xy)$. 
+
+\end{document}
