@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\title{Exercise 1.07}
+
+ \begin{document}
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+7. Let $A$ be a ring in which every element $x$ satisfies $ x^n = x $ for some $n > 1$ (depending on $x$). Show that every prime ideal in $A$ is maximal.
+
+\vspace*{10px} 
+
+Let $ \textgoth{p} $ be a prime ideal, let $ b \notin \textgoth{p} $ and consider the ideal $ \langle \textgoth p , b \rangle $. As $ b^n = b $ for some $n$, it is $ b(b^{n-1} - 1) = 0 \in \textgoth p$. Since $\textgoth p$ is prime and $ b \notin \textgoth{p} $, it must be $ b^{n-1} - 1 \in \textgoth p $, then $ 1 - b^{n-1} \in \textgoth p $. Now $ 1 - b^{n-1} + b^{n-1}= 1 $ is an element of $ \langle \textgoth p , b \rangle $ and $ \langle \textgoth p , b \rangle = (1) $.
+
+
+\end{document}S
