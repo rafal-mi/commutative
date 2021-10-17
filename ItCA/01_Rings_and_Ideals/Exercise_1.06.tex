@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\title{Exercise 1.06}
+
+ \begin{document}
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+6. A ring $ A $ is such that every ideal not contained in the nilradical contains a nonzero idempotent (that is, an element $e$ such that $ e^2 = e \neq 0 $). Prove that the nilradical and the Jacobson radical of $A$ are equal.
+
+\vspace*{10px} 
+
+Assume that the ring has this property and has the Jacobson radical strictly larger than the nilradical. Now the J-radical must have nonzero idempotent: $ e^2 = e \neq 0 $. By Proposition 1.9 characterizing J-radicals, $ 1 - ey $ is a unit for any element $ y $ of the ring, especially $ 1 - e $ is a unit. Now we have $ e - e^2 = 0 $, then $ e(1-e) = 0 $. Multiplying by $ (1-e)^{-1} $ whe get $ e = 0 $, which is a contradiction.
+
+
+\end{document}S
