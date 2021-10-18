@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\title{Exercise 1.08}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+\textbf{Exercise 1.08}. Let $\textgoth a$ be an ideal $ \neq (1) $ in a ring $A$. Show that $ \textgoth a = \sqrt \textgoth a \Leftrightarrow \textgoth a $ is an intersection of prime ideals. 
+
+\vspace*{10px} 
+
+The \emph{only if} direction follows from Proposition 1.14, we prove the \emph{if} direction. Let the ideal be an intersection of some family of prime ideals and let some power of some element be in this ideal. For each prime ideal from the family, either the element itself or its power reduced by one is in this prime ideal. Now it might have happened that the element appeared itself within all ideals of the family; we are done. Otherwise, some prime ideals from the family remain that contain the reduced power of the element; the reduced power is now again in all ideals from the family (those who contain the element must contain its powers), and the problem is stated with this reduced power. Induction works until the element happens in the ideal of interest.
+ 
+
+\end{document}S
