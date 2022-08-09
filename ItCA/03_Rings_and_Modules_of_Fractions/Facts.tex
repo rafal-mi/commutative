@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{geometry}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\title{Facts}
+
+\newtheorem{theorem}{Fact}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px} 
+
+\begin{theorem}
+For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
+\end{theorem}
+
+
+\vspace*{10px} 
+
+\noindent
+\textit{Proof.}
+\[
+  \frac{a}{1} \cdot \frac{b}{t} = \frac{1}{1} 
+\]
+
+\[
+  \frac{ab}{t} = \frac{1}{1}
+\]
+
+\[
+   (ab, t) \equiv (1, 1)
+\]
+ 
+\[
+   (ab - t)u = 0
+\]
+
+\[
+   abu = tu
+\]
+
+\[
+   abu \in S
+\]
+
+As \( S \) is saturated, \( a \in S \).  \qed
+
+\end{document}S
