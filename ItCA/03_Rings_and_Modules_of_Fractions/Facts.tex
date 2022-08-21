@@ -29,24 +29,21 @@
 \urlstyle{same}
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
 
-\title{Facts}
+\title{Facts about Rings of Fractions}
+\date{}
 
-\newtheorem{theorem}{Fact}
+\newtheorem{theorem}{Fact}[section]
+\newtheorem{example}[theorem]{Example}
 
 \begin{document}
 
 \maketitle
 
-\begin{center}
-M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
-\end{center}
-
-\vspace*{10px} 
+\section{Introduction}
 
 \begin{theorem}
 For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
 \end{theorem}
-
 
 \vspace*{10px} 
 
@@ -77,5 +74,33 @@ For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
 \]
 
 As \( S \) is saturated, \( a \in S \).  \qed
+
+\vspace{2em}
+
+\begin{theorem}
+For $A$ a field, and $S = \{-1, 1\}$, $S^{-1}A \cong A$.
+\end{theorem}
+
+\noindent
+\textit{Proof.} It is easily verified that the standard isomorphism from $A$ to $S^{-1}A$ is 1-1 and onto. \qed
+
+\begin{theorem}
+For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing zero, $S^{-1}A \cong A$.
+\end{theorem}
+
+\noindent
+\textit{Proof.} The standard homomorphism $f:a \mapsto a/1$ of $A$ into $S^{-1}A$ is injectve: if $a/1 = a'/1$ then $a \cdot 1 = a1 \cdot 1$, then $a = a'$. It is surjective: $f(as^{-1}) = f(a)f(s^{-1}) = (a/1)(s^{-1}/1) = \ldots$, but $s^{-1}/1 = 1/s$ as $s^{-1}s = 1 \cdot 1$; continuing, $\ldots = (a/1)(1/s) = a/s$. \qed
+
+\begin{theorem}
+For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing zero, $S^{-1}A \cong A$.
+\end{theorem}
+
+\noindent
+\textit{Proof.} The standard homomorphism $f:a \mapsto a/1$ of $A$ into $S^{-1}A$ is injectve: if $a/1 = a'/1$ then $a \cdot 1 = a1 \cdot 1$, then $a = a'$. It is surjective: $f(as^{-1}) = f(a)f(s^{-1}) = (a/1)(s^{-1}/1) = \ldots$, but $s^{-1}/1 = 1/s$ as $s^{-1}s = 1 \cdot 1$; continuing, $\ldots = (a/1)(1/s) = a/s$. \qed
+
+\begin{example}
+Some example.
+\end{example}
+
 
 \end{document}S
