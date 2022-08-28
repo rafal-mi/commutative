@@ -35,45 +35,19 @@
 \newtheorem{theorem}{Fact}[section]
 \newtheorem{example}[theorem]{Example}
 
-\begin{document}
+\begin{document} 
 
 \maketitle
 
 \section{Introduction}
 
 \begin{theorem}
-For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
+If $0 \in S$, then $S^{-1}A$ is a trivial ring.
 \end{theorem}
 
-\vspace*{10px} 
-
 \noindent
-\textit{Proof.}
-\[
-  \frac{a}{1} \cdot \frac{b}{t} = \frac{1}{1} 
-\]
+\textit{Proof.} Any $(a, s), (a', s')$ are related because $(as' - a's) \cdot 0 = 0$ with $0 \in S$. \qed
 
-\[
-  \frac{ab}{t} = \frac{1}{1}
-\]
-
-\[
-   (ab, t) \equiv (1, 1)
-\]
- 
-\[
-   (ab - t)u = 0
-\]
-
-\[
-   abu = tu
-\]
-
-\[
-   abu \in S
-\]
-
-As \( S \) is saturated, \( a \in S \).  \qed
 
 \vspace{2em}
 
@@ -108,6 +82,50 @@ For $A$ a field, the ring of fractions and the field of fractions are isomorphic
 \begin{example}
 Some example.
 \end{example}
+
+\begin{theorem}
+The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fractions $T^{-1}(A/I)$, where $T$ is the image of $S$ in $A/I$, equals the module of fractions $S^{-1}(A/I)$.
+\end{theorem} 
+
+\noindent
+\textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
+\qed
+
+
+\section{Saturated}
+
+\begin{theorem}
+For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
+\end{theorem}
+
+\noindent
+\textit{Proof.}
+\[
+  \frac{a}{1} \cdot \frac{b}{t} = \frac{1}{1} 
+\]
+
+\[
+  \frac{ab}{t} = \frac{1}{1}
+\]
+
+\[
+   (ab, t) \equiv (1, 1)
+\]
+ 
+\[
+   (ab - t)u = 0
+\]
+
+\[
+   abu = tu
+\]
+
+\[
+   abu \in S
+\]
+
+As \( S \) is saturated, \( a \in S \).  \qed
+
 
 
 \end{document}S
