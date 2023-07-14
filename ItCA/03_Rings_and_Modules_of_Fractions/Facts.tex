@@ -48,6 +48,10 @@ If $0 \in S$, then $S^{-1}A$ is a trivial ring.
 \noindent
 \textit{Proof.} Any $(a, s), (a', s')$ are related because $(as' - a's) \cdot 0 = 0$ with $0 \in S$. \qed
 
+\begin{theorem}
+$A$ a PID, the equivalence relation in $ A \times S $ is: $ (a, s) \equiv (a', s') $ iff $ as' = a's $. \qed
+\end{theorem}
+
 
 \vspace{2em}
 
@@ -57,13 +61,6 @@ For $A$ a field, and $S = \{-1, 1\}$, $S^{-1}A \cong A$.
 
 \noindent
 \textit{Proof.} It is easily verified that the standard isomorphism from $A$ to $S^{-1}A$ is 1-1 and onto. \qed
-
-\begin{theorem}
-For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing zero, $S^{-1}A \cong A$.
-\end{theorem}
-
-\noindent
-\textit{Proof.} The standard homomorphism $f:a \mapsto a/1$ of $A$ into $S^{-1}A$ is injectve: if $a/1 = a'/1$ then $a \cdot 1 = a1 \cdot 1$, then $a = a'$. It is surjective: $f(as^{-1}) = f(a)f(s^{-1}) = (a/1)(s^{-1}/1) = \ldots$, but $s^{-1}/1 = 1/s$ as $s^{-1}s = 1 \cdot 1$; continuing, $\ldots = (a/1)(1/s) = a/s$. \qed
 
 \begin{theorem}
 For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing zero, $S^{-1}A \cong A$.
@@ -88,7 +85,7 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \end{theorem} 
 
 \noindent
-\textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
+\textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
 \qed
 
 
