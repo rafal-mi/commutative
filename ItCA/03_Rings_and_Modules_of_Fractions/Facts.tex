@@ -10,6 +10,7 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{geometry}
+\usepackage{tikz-cd}
 
 \geometry{
  a4paper,
@@ -30,6 +31,7 @@
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
 
 \title{Facts about Rings of Fractions}
+\author{Rafal Michalski}
 \date{}
 
 \newtheorem{theorem}{Fact}[section]
@@ -87,6 +89,53 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \noindent
 \textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
 \qed
+
+\begin{theorem}
+What is $S^{-1}\textgoth{a}$?
+\end{theorem}
+
+\noindent
+It can be either an $S^{-1}A$-module $S^{-1}\textgoth{a}$, because $\textgoth{a}$ is an $A$-module, or the extension $S^{-1}\textgoth{a} = \textgoth{a} \: S^{-1}A$ in $S^{-1}A$ of the ideal $\textgoth{a}$ in $A$ via the canonical $A \rightarrow S^{-1}A: a \mapsto a/s$. In both cases elements of $S^{-1}\textgoth{a}$ are written as $a/s$ with $a \in \textgoth{a}$, $s \in S$, but they come from different sets. In the first, module case, $a/s$ is in the quotient of $\textgoth{a} \times S$, in the second, extension ideal case, $a/s$ is in the quotient of $A \times S$. We are talking of $S^{-1}A$-modules, not rings, so there can only be an $S^{-1}A$-module isomorphism, which is obvious:
+\[
+  \textgoth{a} \times S / \sim_\textgoth{a} \; \; \ni \; a/s \mapsto a/s \; \in \; A \times S / \sim_A
+\]
+\qed
+
+\begin{theorem}
+Case $\textgoth{a} = \textgoth{p}$, a prime ideal. What is $S^{-1}\textgoth{p}$?
+\end{theorem}
+
+\noindent
+It can be either the $A_\textgoth{p}$-module $\textgoth{p}_\textgoth{p}$, because $\textgoth{p}$ is an $A$-module, or the extension $\textgoth{p} A_\textgoth{p}$ in $A_\textgoth{p}$ of the ideal $\textgoth{p}$ in $A$, via the canonical $A \rightarrow A_\textgoth{p} : a \mapsto a/s$. Looks like we don't have the $\cdot_\textgoth{p}$-instead-of-$S^{-1} \cdot$ notation in the ideal extension case, but then, the quotient notation $ A_\textgoth{p} / \textgoth{p}_\textgoth{p}$ is used, which makes sense only if $\textgoth{p}_\textgoth{p}$ is an ideal in $A_\textgoth{p}$
+\[
+   \textgoth{p}_\textgoth{p} = \textgoth{p} \: A_\textgoth{p}
+\]
+\qed
+
+\begin{theorem}
+How $B_\textgoth{q}$ is an $A_\textgoth{p}$-module?
+\end{theorem}
+
+\noindent
+Let $g = \psi \circ f$ be the composition $A \rightarrow B \rightarrow T^{-1}B : a \rightarrow f(a) \rightarrow f(a)/1 $. This composition sends $s \in S$ to a unit in $T^{-1}B$, as $(f(s)/1)(1/f(s)) = 1/1$, where $f(s) \in f(S) = f(A \setminus \textgoth{p}) \subseteq B \setminus \textgoth{q} = T$. By the universal property of the ring of fractions, $g$ factorizes
+\[
+     \begin{tikzcd}
+     A \arrow{r}{\phi} \arrow{d}{f} & S^{-1}A \arrow{d}{h} \\
+     B \arrow{r}{\psi} & T^{-1}B
+     \end{tikzcd}
+\]
+
+\noindent
+where the recipe for $h$ is given in \textbf{Proposition 3.1} of [ItCA] as $a/s \mapsto g(a)g(s)^{-1} = (f(a)/1)(1/f(s)) = f(a)/f(s)$.
+\qed
+
+\begin{theorem}
+How $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ is an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
+\end{theorem}
+
+\noindent
+How is it?
+
 
 
 \section{Saturated}
