@@ -113,14 +113,14 @@ It can be either the $A_\textgoth{p}$-module $\textgoth{p}_\textgoth{p}$, becaus
 \qed
 
 \begin{theorem}
-How $B_\textgoth{q}$ is an $A_\textgoth{p}$-module?
+How is $B_\textgoth{q}$ an $A_\textgoth{p}$-module?
 \end{theorem}
 
 \noindent
 Let $g = \psi \circ f$ be the composition $A \rightarrow B \rightarrow T^{-1}B : a \rightarrow f(a) \rightarrow f(a)/1 $. This composition sends $s \in S$ to a unit in $T^{-1}B$, as $(f(s)/1)(1/f(s)) = 1/1$, where $f(s) \in f(S) = f(A \setminus \textgoth{p}) \subseteq B \setminus \textgoth{q} = T$. By the universal property of the ring of fractions, $g$ factorizes
 \[
      \begin{tikzcd}
-     A \arrow{r}{\phi} \arrow{d}{f} & S^{-1}A \arrow{d}{h} \\
+     A \arrow{r}{\phi} \arrow{d}{f} \arrow{dr}{\eta} & S^{-1}A \arrow{d}{h} \\
      B \arrow{r}{\psi} & T^{-1}B
      \end{tikzcd}
 \]
@@ -130,12 +130,46 @@ where the recipe for $h$ is given in \textbf{Proposition 3.1} of [ItCA] as $a/s 
 \qed
 
 \begin{theorem}
-How $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ is an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
+How is $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
 \end{theorem}
 
 \noindent
-How is it?
+The kernel of the composition $A_\textgoth{p} \rightarrow B_\textgoth{q} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$ : $a/s \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$ contains $\textgoth{p} A_\textgoth{p}$ (because $\textgoth{p} = f^{-1}(\textgoth{q})$) so the composition factors through $A_\textgoth{p} / \textgoth{p} A_\textgoth{p} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$: $a/s + \textgoth{p} A_\textgoth{p} \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$. This is a ring homomorphism that makes $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module.
+\qed
 
+\begin{theorem}
+What is $\textgoth{p} M_\textgoth{p}$ ?
+\end{theorem}
+
+\noindent
+When $M_\textgoth{p}$ is seen as an $A$-module, $\textgoth{p} M_\textgoth{p} = \{am/s: a \in \textgoth{p}, m \in M, s \notin \textgoth{p} \}$. When $M_\textgoth{p}$ is seen as an $A_\textgoth{p}$-module, $\textgoth{p}$ is not even an ideal in $A_\textgoth{p}$, but its extension, $\textgoth{p} A_\textgoth{p}$ is, and $(\textgoth{p} A_\textgoth{p}) M_\textgoth{p} = \{(a/s')(m/s): a \in \textgoth{p}, m \in M, s, s' \notin \textgoth{p} \} = \{am/s: a \in \textgoth{p}, m \in M, s \notin \textgoth{p} \}$, the same set, which we write $\textgoth{p} M_\textgoth{p}$ for:
+
+\[
+  \textgoth{p} M_\textgoth{p} = (\textgoth{p} A_\textgoth{p}) M_\textgoth{p}
+\]
+\qed
+
+\begin{theorem}
+How
+\[
+\frac{(B \otimes_A M)_\textgoth{q}}{\textgoth{q} (B \otimes_A M)_\textgoth{q}} 
+\cong
+\frac{B_\textgoth{q}}{\textgoth{q}_\textgoth{q}} \otimes_B B \otimes_A M
+\]
+?
+\end{theorem}
+
+\noindent
+Proposition 3.5 states, in the language of subscript-$\textgoth{p}$, that $M_\textgoth{p} \cong A_\textgoth{p} \otimes_A M$ over $A_\textgoth{p}$. Here $(B \otimes_A M)_\textgoth{q} \cong B_\textgoth{q} \otimes_B (B \otimes_A M)$. Then
+
+\begin{gather*}
+\frac{B_\textgoth{q} \otimes_B (B \otimes_A M)}{(\textgoth{q} B_\textgoth{q})(B_\textgoth{q} \otimes_B (B \otimes_A M))}
+\cong
+\frac{B_\textgoth{q}}{\textgoth{q} B_\textgoth{q}} \otimes_{B_\textgoth{q}} (B_\textgoth{q} \otimes_B (B \otimes_A M)) \\
+\cong
+\frac{B_\textgoth{q}}{\textgoth{q}_\textgoth{q}} \otimes_B B \otimes_A M
+\end{gather*}
+\qed
 
 
 \section{Saturated}
