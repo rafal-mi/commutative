@@ -220,19 +220,130 @@ What is $ B_\textgoth{p}$?
 \end{theorem}
 
 % \noindent
-Since $B$ is an $A$-module, $ B_\textgoth{p}$ consists of all elements $b / s$ where $b \in B, s \in A \setminus \textgoth{p}$. $B \textgoth{p}$ is:
+Since $B$ is an $A$-module, $ B_\textgoth{p}$ consists of all elements $b / s$ where $b \in B, s \in A \setminus \textgoth{p}$. This is the standard construction of $S^{-1}A$-module $S^{-1}M$ in the text. It is:
 
 \begin{itemize}
  \item An $A$-module.
- \item An $A_\textgoth{p}$-module: the construction of $S^{-1}A$-module $S^{-1}M$ in the text.
+ \item An $A_\textgoth{p}$-module: the standard construction.
  \item A $B$-module.
  \item A ring.
 \end{itemize}
 
+\qed
+
+\begin{theorem}
+What is $ \textgoth{p} B_\textgoth{p}$?
+\end{theorem}
+
+% \noindent
+$B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s)$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
+After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s_i \in A \setminus \textgoth{p}$ that is, $b/s$ where $b \in \textgoth{p} B$ and $s_i \in A \setminus \textgoth{p}$.
+\qed
+
+\begin{theorem}
+$\textgoth{p} B_\textgoth{p}$ is an ideal in $B_\textgoth{p}$.
+\end{theorem}
+
+% \noindent
+As a module, it is an abelian group, then the multiplication property is easily verified.
+\qed
+
+\vspace{1em}
+The ideal $\textgoth{p} A_\textgoth{p}$ was the single maximal ideal in $A_\textgoth{p}$. We do not know this for $\textgoth{p} B_\textgoth{p}$ in $B_\textgoth{p}$.
+
+
+\begin{theorem}
+How is $A_\textgoth{p}$ an $A$-module ?
+\end{theorem}
+
+% \noindent
+The canonical map $\phi: A \rightarrow A_\textgoth{p}: a \mapsto \frac{a}{1}$ gives the multiplication by scalars from $A$
+
+\[
+ a' \frac{a}{s} = \phi(a') \frac{a}{s} = \frac{a'}{1} \frac{a}{s} = \frac{a' a}{s}
+\]
+\qed
+
+
+\begin{theorem}
+What is $ \textgoth{p} A_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+As $A_\textgoth{p}$ is an $A$-module, we can multiply it by a prime ideal in $A$ in a standard way
+
+\[
+ \sum a'_i \frac{a_i}{s_i} = \sum \frac{a' a_i}{s_i}
+\]
+
+After bringing to a common denominator, this is $a/s$ with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
+
+\qed
+
+\begin{theorem}
+How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module ?
+\end{theorem}
+
+% \noindent
+Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text.
+\[
+ \frac{a}{s'} \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
+\]
 
 \qed
 
 
+\begin{theorem}
+What is $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+As $B_\textgoth{p}$ is an $A_\textgoth{p}$-module, and $\textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$, Any element is, from the definition of the ideal-by-module and from the general element of $\textgoth{p} A_\textgoth{p}$ ($a \in \textgoth{p}$)
+
+\[
+ \sum_i \frac{a_i}{s'_i} \frac{b_i}{s_i} = \sum \frac{ab}{s's}
+\]
+
+After bringing to a common denominator, this becomes $ab/s$ where $a \in \textgoth{p}$. Notice we got a general element of $\textgoth{p} B_\textgoth{p}$, so
+
+\[
+ (\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}
+\]
+\qed
+
+\begin{theorem}
+How $B_\textgoth{p}/\textgoth{p} B_\textgoth{p} = A_\textgoth{p}/\textgoth{p} A_\textgoth{p} \otimes_{A_\textgoth{p}} B_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+Apply Exercise 2.2
+\[
+ A/\textgoth{a} \otimes_A M \cong M / \textgoth{a} M 
+\]
+
+\noindent
+to $M \coloneqq B_\textgoth{p}$, $A \coloneqq A_\textgoth{p}$, $\textgoth{a} \coloneqq \textgoth{p} A_\textgoth{p}$
+
+\[
+ A_\textgoth{p}/\textgoth{p} A_\textgoth{p} \otimes_{A_\textgoth{p}} B_\textgoth{p} = B_\textgoth{p}/(\textgoth{p} A_\textgoth{p}) B_\textgoth{p}
+\]
+
+\noindent
+now apply $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}$ 
+\qed
+
+\begin{theorem}
+How $A_\textgoth{p} \otimes_A B \cong B_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+Apply Proposition 3.5: $S^{-1}A \otimes_A M \cong S^{-1}M$ .
+\qed
+
+\vspace{1em}
+We now understand the isomorphisms in the solution of ItCA's 3.21(iv) by J D. Taylor.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Saturated}
 
