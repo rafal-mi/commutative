@@ -276,7 +276,13 @@ As $A_\textgoth{p}$ is an $A$-module, we can multiply it by a prime ideal in $A$
  \sum a'_i \frac{a_i}{s_i} = \sum \frac{a' a_i}{s_i}
 \]
 
-After bringing to a common denominator, this is $a/s$ with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
+\noindent
+After bringing to a common denominator, this is
+\[
+ \frac{a}{s}
+\]
+\noindent
+with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
 
 \qed
 
@@ -285,7 +291,7 @@ How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module ?
 \end{theorem}
 
 % \noindent
-Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text.
+Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text. The multiplication by a scalar is
 \[
  \frac{a}{s'} \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
 \]
@@ -304,7 +310,15 @@ As $B_\textgoth{p}$ is an $A_\textgoth{p}$-module, and $\textgoth{p} A_\textgoth
  \sum_i \frac{a_i}{s'_i} \frac{b_i}{s_i} = \sum \frac{ab}{s's}
 \]
 
-After bringing to a common denominator, this becomes $ab/s$ where $a \in \textgoth{p}$. Notice we got a general element of $\textgoth{p} B_\textgoth{p}$, so
+\noindent
+After bringing to a common denominator, this becomes
+\[
+ ab/s = f(a)b/s
+\]
+
+
+\noindent
+where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B_\textgoth{p}$, so
 
 \[
  (\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}
@@ -329,7 +343,8 @@ to $M \coloneqq B_\textgoth{p}$, $A \coloneqq A_\textgoth{p}$, $\textgoth{a} \co
 \]
 
 \noindent
-now apply $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}$ 
+now apply $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}$ . 
+
 \qed
 
 \begin{theorem}
@@ -337,11 +352,22 @@ How $A_\textgoth{p} \otimes_A B \cong B_\textgoth{p}$ ?
 \end{theorem}
 
 % \noindent
-Apply Proposition 3.5: $S^{-1}A \otimes_A M \cong S^{-1}M$ .
+Apply Proposition 3.5: $S^{-1}A \otimes_A M \cong S^{-1}M$ . 
+
 \qed
 
 \vspace{1em}
 We now understand the isomorphisms in the solution of ItCA's 3.21(iv) by J D. Taylor.
+
+\begin{equation*}
+\begin{split}
+ B_\textgoth{p}/\textgoth{p}B_\textgoth{p} 
+ & = A_\textgoth{p}/\textgoth{p}A_\textgoth{p} 
+ \otimes_{A_\textgoth{p}} B_\textgoth{p} \\ 
+ & = K_\textgoth{p} \otimes_{A_\textgoth{p}} A_\textgoth{p} \otimes_A B \\
+ & = K_\textgoth{p} \otimes_A B
+\end{split}
+\end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
