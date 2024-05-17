@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{tikz-cd}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\title{Exact Sequences and Fractions}
+\author{Rafal Michalski}
+\date{}
+
+\newtheorem{theorem}{Fact}
+\newtheorem{example}[theorem]{Example}
+
+\begin{document} 
+
+\maketitle
+
+An exact sequence
+
+\[
+0 \longrightarrow M' \overset{f}{\longrightarrow} M \overset{g}{\longrightarrow} M' \longrightarrow 0
+\]
+
+\noindent
+induces isomorphism $M/f(M') \cong M''$ . It works like this:
+\[
+m + f(M') \mapsto g(m)
+\]
+
+\noindent
+The case of a quotient
+
+\[
+0 \longrightarrow N \overset{\iota}{\longrightarrow} M \overset{\pi}{\longrightarrow} M/N \longrightarrow 0
+\]
+\[
+m + N \mapsto m + N
+\]
+\noindent
+as $\iota(N) = N$ here, then $M / \iota(N) = M/N$ .
+
+\vspace{2mm}
+
+Apply the exact functor $S^{-1}$ now:
+
+\[
+0  \longrightarrow S^{-1}N {\xrightarrow{\hspace{2mm}S^{-1}\iota\hspace{2mm}}} S^{-1}M {\xrightarrow{\hspace{2mm}S^{-1}\pi\hspace{2mm}}} M/N \longrightarrow 0
+\]
+
+\noindent
+where $S^{-1}\iota$ is
+
+\[
+y/s \mapsto  y/s
+\]
+
+\noindent
+the left in $S^{-1}N$, the right in $S^{-1}M$, and $S^{-1}\pi$ is
+
+\[
+x/s \mapsto \pi(x)/s 
+\]
+
+\[
+x/s \mapsto \frac{x + N}{s}
+\]
+
+As sets, $N \times S \subseteq M \times S$. And $S^{-1}\iota$ is an injection. Is it an embedding? Is a class in $N \times S$ also a class in $M \times S$ ? Any class in $N \times S$ is contained in some class in $M \times S$: if $(y, s) \sim (y', s')$ in $N \times S$, then $u(s'y - sy')$ for some $u \in S$, which is also true in $M \times S$ so the pairs are also related in this larger product. The map $S^{-1}\iota: y/s \mapsto y/s$ assigns to a class in the smaller the containing class in the larger. Can the larger class contain more smaller classes? This would contradict the injectivity of the map, so it cannot. Can the larger class be a strictly larger set? Yes, two cases may happen. First, $(y, s) \sim (x, s')$ for some $x \notin N$, second, $(x, s') \sim (x', s'')$ for some another $x' \notin N$ . The map $S^{-1}\iota$ is an injection, but not an embedding.
+
+The co-kernel isomorphism $S^{-1}M/S^{-1}\iota(S^{-1}N) \rightarrow S^{-1}(M/N)$ is
+
+\[
+\frac{S^{-1}M}{S^{-1}\iota(S^{-1}N)} \cong S^{-1}(M/N)
+\]
+
+\[
+\frac{x}{s} + S^{-1}\iota(S^{-1}N) \mapsto S^{-1}\pi(\frac{x}{s})
+\]
+
+\[
+\frac{x}{s} + S^{-1}\iota(S^{-1}N) \mapsto \frac{x + N}{s}
+\]
+
+If we decide to identify $S^{-1}\iota(S^{-1}N)$ with $S^{-1}N$, since both are $\{ y/s: y \in N \}$, although in the image the fraction is in $S^{-1}M$ not $S^{-1}N$, we can write the cokernel isomorphism as
+
+\[
+\frac{x}{s} + S^{-1}N \mapsto \frac{x + N}{s}
+\]
+
+Way 1: localizing at $\textgoth{p}$ then taking the quotient $\mod \textgoth{q}$ . But $\textgoth{q}$ is not an ideal of $A_\textgoth{p}$, only an ideal of $A$. By Corollary 3.13, ideals of $A_\textgoth{p}$ are in 1-1 correspondence with the prime ideals of $A$ contained in $\textgoth{p}$
+
+\[
+\textgoth{q} \mapsto S^{-1}\textgoth{q} = \{a/s: a \in \textgoth{q}, s \notin \textgoth{p}\}
+\]
+
+\noindent
+As $S^{-1}\textgoth{q}$ is an ideal in $A_\textgoth{p}$, we can take the quotient $A_\textgoth{p} / S^{-1}\textgoth{q}$ . Its elements look like 
+
+\[
+\frac{a}{s} + S^{-1}\textgoth{q}, a \in \textgoth{q}, s \notin \textgoth{p}
+\]
+
+Way 2: taking the quotient by $\textgoth{q}$ then localizing in the image of $\textgoth{p}$ which is $\{ a + \textgoth{q}: a \in \textgoth{p} \}$ that we can write ambiguously as $\textgoth{p} + \textgoth{q}$. The localization now has symbol $(A/\textgoth{q})_{\textgoth{p} + \textgoth{q}}$. The general element of the localization is 
+
+\[
+\frac{a + \textgoth{q}}{s + \textgoth{q}}, \; s + \textgoth{q} \notin \textgoth{p} + \textgoth{q}
+\]
+
+\begin{theorem}
+$s + \textgoth{q} \notin \textgoth{p} + \textgoth{q} \iff s \notin \textgoth{p}$ .
+\end{theorem}
+
+\noindent 
+\textit{Proof}. The $\implies$ direction: Let $s + \textgoth{q} \in \textgoth{p} + \textgoth{q}$; $s + \textgoth{q} = a + \textgoth{q}$ for some $a \in \textgoth{p}$; $s - a \in \textgoth{q}$, but since $\textgoth{q} \subseteq \textgoth{p}$, $s - a \in \textgoth{p}$; now $s \in \textgoth{p}$. The $\impliedby$ direction is obvious.
+
+The general element of the localization $(A/\textgoth{q})_{\textgoth{p} + \textgoth{q}}$ is now
+
+\[
+\frac{a + \textgoth{q}}{s + \textgoth{q}}, \; s + \textgoth{q} \notin \textgoth{p} + \textgoth{q}
+\]
+
+\[
+  \begin{tikzcd}
+     A \arrow[r, "\phi"] \arrow[d, two heads] & A_\textgoth{p} \arrow[dd, , two heads] \\
+     A/\textgoth{q} \arrow[d] \\
+     (A/\textgoth{q})_{\textgoth{p} + \textgoth{q}} \arrow[r, "\cong"] & A_\textgoth{p}/\textgoth{q}_\textgoth{p} 
+  \end{tikzcd}
+\]
+
+\noindent
+Where $\textgoth{q}_\textgoth{p} = S^{-1}\textgoth{q}$ with $S = A - \textgoth{p}$. Is this notation used anywhere?
+
+By (3.4.iii), the bottom arrow should be an isomorphism. 
+
+\end{document}S
