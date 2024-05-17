@@ -30,7 +30,7 @@
 \urlstyle{same}
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
 
-\title{Exact Sequences and Fractions}
+\title{Exact Sequences and Fractions \\ Remark after Corollary 3.13}
 \author{Rafal Michalski}
 \date{}
 
@@ -157,5 +157,113 @@ The general element of the localization $(A/\textgoth{q})_{\textgoth{p} + \textg
 Where $\textgoth{q}_\textgoth{p} = S^{-1}\textgoth{q}$ with $S = A - \textgoth{p}$. Is this notation used anywhere?
 
 By (3.4.iii), the bottom arrow should be an isomorphism. 
+\begin{enumerate}
+    \item Map between sets: $\frac{a + \textgoth{q}}{s} \mapsto \frac{a + \textgoth{q}}{s + \textgoth{q}}$  .
+    \item Show this is an $A$-module isomorphism.
+    \item Show that $(A/\textgoth{q})_{\textgoth{p}+\textgoth{q}}$ is an $A_\textgoth{p}$-module, as $A_\textgoth{p}/\textgoth{q}_\textgoth{p}$ already is. This step is probably optional as we target a ring isomorphism.
+    \item Prove our map being a ring isomorphism. So why did we need $A_\textgoth{p}$-modules? Why even $A$-modules? For commutative group maybe.
+\end{enumerate}
 
+The map
+\[
+(A/\textgoth{q})_{\textgoth{p}+\textgoth{q}} \ni 
+\frac{a + \textgoth{q}}{s} \mapsto \frac{a + \textgoth{q}}{s + \textgoth{q}} \in
+A_\textgoth{p}/\textgoth{q}_\textgoth{p}
+\]
+
+Well-definition. Let
+\[
+\frac{a + \textgoth{q}}{s} = \frac{a' + \textgoth{q}}{s'} 
+\]
+\[
+u(s'(a + \textgoth{q}) - s(a' + \textgoth{q}) = 0
+\]
+\[
+us'a - usa' \in \textgoth{q}
+\]
+\[
+u(s'a - sa') \in \textgoth{q}
+\]
+\noindent
+but $u \notin \textgoth{p}$ then $u \notin \textgoth{p}$ then $s'a - sa' \in \textgoth{q}$. Now when
+\[
+\frac{a + \textgoth{q}}{s + \textgoth{q}} = \frac{a' + \textgoth{q}}{s' + \textgoth{q}}
+\]
+in the ring $(A/\textgoth{q})_{\textgoth{p}+\textgoth{q}}$ ? 
+The multipliset is $A/\textgoth{q}-(\textgoth{p}+\textgoth{q})$.
+\[
+(u + \textgoth{q}((s' + \textgoth{q})(a + \textgoth{q}) - (s + \textgoth{q})(a' + \textgoth{q})) = 0 + \textgoth{q}
+\]
+\noindent
+for some $u + \textgoth{q} \notin \textgoth{p} + \textgoth{q} \iff u \notin \textgoth{p}$.
+\[
+u(s'a - sa') \in \textgoth{q}
+\]
+\noindent
+but $u \notin \textgoth{q}$
+\[
+s'a - sa' \in \textgoth{q}
+\]
+\noindent
+We have got the same condition as above, so our map is well defined.
+
+Our map looks surjective. Is it injective? Let
+\[
+\frac{a + \textgoth{q}}{s + \textgoth{q}} = \frac{a' + \textgoth{q}}{s' + \textgoth{q}}
+\]
+\noindent
+We already know the condition for this:
+\[
+s'a - sa' \in \textgoth{q} \implies \frac{a + \textgoth{q}}{s} = \frac{a' + \textgoth{q}}{s}
+\]
+\noindent
+The map is finally bijective. 
+
+It remains to verify the preservation of multiplication
+\[
+\frac{a + \textgoth{q}}{s} \cdot \frac{a' + \textgoth{q}}{s'} 
+= \frac{aa' + \textgoth{q}}{ss'} \mapsto 
+\frac{aa' + \textgoth{q}}{ss' + \textgoth{q}} 
+= \frac{a + \textgoth{q}}{s + \textgoth{q}} \cdot \frac{a' + \textgoth{q}}{s' + \textgoth{q}}
+\]
+\noindent
+the image of multiplication is the multiplication of images, thus the multiplication is preserved.
+
+Let's consider the localized ring $(A/\textgoth{q})_{\textgoth{p} + \textgoth{q}}$ as an $A_\textgoth{p}$-module. The scalar multiplication will be
+\[
+\frac{a}{s} \cdot \frac{a' + \textgoth{q}}{s' + \textgoth{q}} = 
+\frac{aa' + \textgoth{q}}{ss' + \textgoth{q}}
+\]
+\noindent
+Well-definition? Let 
+\[
+\frac{a_1}{s_1} = \frac{a_2}{s_2} \quad \text{and} \quad
+\frac{a'_1 + \textgoth{q}}{s'_1 + \textgoth{q}} = \frac{a'_2 + \textgoth{q}}{s'_2 + \textgoth{q}}
+\]
+\[
+u(a_1s_2 - a_2s_1) = 0, u \notin \textgoth{p}; \quad s'_2a'_1-s'_1a'_2 \in \textgoth{q}
+\]
+\[
+a_1s_2 - a_2s_1 = 0
+\]
+\noindent
+Now the condition for
+\[
+\frac{a_1a'_1 + \textgoth{q}}{s_1s'_1 + \textgoth{q}} = \frac{a_2a'_2 + \textgoth{q}}{s_2s'_2 + \textgoth{q}}
+\]
+\noindent
+is
+\[
+s_2s'_2a_1a'_1 - s_1s'_1a_2a'_2 \in \textgoth{q}
+\]
+\noindent
+Let
+\[
+c = a_1s_2 - a_2s_1
+\]
+\[
+c(s'_2a'_1 - s'_1a'_2) \in \textgoth{q}
+\]
+\noindent
+because the parentheses are in $\textgoth{q}$. The scalar multiplication is well-defined, because this condition is satisfied.
 \end{document}S
