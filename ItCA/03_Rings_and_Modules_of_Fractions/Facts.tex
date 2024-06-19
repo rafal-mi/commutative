@@ -91,15 +91,59 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \qed
 
 \begin{theorem}
+What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+In the Solutions by Y. P. Gaillard, the residue field is $A_\textgoth{p} / \textgoth{p}A_\textgoth{p}$, so the single maximal ideal of $A_\textgoth{p}$ from the Example 1, p. 38 of ItCA must be just $\textgoth{p}A_\textgoth{p}$
+\[
+  \textgoth{p}A_\textgoth{p} = \{a/s: a \in \textgoth{p}, s \notin \textgoth{p}\}
+\]
+
+\noindent
+Then $\textgoth{a}A_\textgoth{p}$ must be the generalization
+\[
+  \textgoth{a}A_\textgoth{p} = \{a/s: a \in \textgoth{a}, s \notin \textgoth{p}\}
+\]
+
+\qed
+
+\begin{theorem}
 What is $S^{-1}\textgoth{a}$?
 \end{theorem}
 
 \noindent
-It can be either an $S^{-1}A$-module $S^{-1}\textgoth{a}$, because $\textgoth{a}$ is an $A$-module, or the extension $S^{-1}\textgoth{a} = \textgoth{a} \: S^{-1}A$ in $S^{-1}A$ of the ideal $\textgoth{a}$ in $A$ via the canonical $A \rightarrow S^{-1}A: a \mapsto a/s$. In both cases elements of $S^{-1}\textgoth{a}$ are written as $a/s$ with $a \in \textgoth{a}$, $s \in S$, but they come from different sets. In the first, module case, $a/s$ is in the quotient of $\textgoth{a} \times S$, in the second, extension ideal case, $a/s$ is in the quotient of $A \times S$. We are talking of $S^{-1}A$-modules, not rings, so there can only be an $S^{-1}A$-module isomorphism, which is obvious:
+It can be either an $S^{-1}A$-module $S^{-1}\textgoth{a}$, because $\textgoth{a}$ is an $A$-module, or the extension $S^{-1}\textgoth{a} = \textgoth{a} \: S^{-1}A$ in $S^{-1}A$ of the ideal $\textgoth{a}$ in $A$. In both cases elements of $S^{-1}\textgoth{a}$ are written as $a/s$ with $a \in \textgoth{a}$, $s \in S$, but they come from different sets. In the first, module case, $a/s$ is in the quotient of $\textgoth{a} \times S$, in the second, extension ideal case, $a/s$ is in the quotient of $A \times S$. We are talking of $S^{-1}A$-modules, not rings, so there can only be $A$-module and $S^{-1}A$-module isomorphism:
 \[
   \textgoth{a} \times S / \sim_\textgoth{a} \; \; \ni \; a/s \mapsto a/s \; \in \; A \times S / \sim_A
 \]
 \qed
+
+\begin{theorem}
+What is $\textgoth{a}_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+It is the $A$-module $\textgoth{a}$ localized at $\textgoth{p}$. It is an $A_\textgoth{p}$-module. We also use this notation for the ideal $S^{-1}\textgoth{a}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$. How are they isomorphic? $a/s \mapsto a/s$ with $a \in \textgoth{a}, s \notin $.  Of what it is an isomorphism? Of $A$-modules, of $A_\textgoth{p}$-modules. They are not rings.
+
+
+\begin{theorem}
+What is $S^{-1}\textgoth{a}$ in case $S = A \setminus \textgoth{p}$?
+\end{theorem}
+
+\noindent
+It can be either an $A_\textgoth{p}$-module $\textgoth{a}_\textgoth{p}$, because $\textgoth{a}$ is an $A$-module, or the extension $S^{-1}\textgoth{a} = \textgoth{a} \: A_\textgoth{p}$ in $A_\textgoth{p}$ of the ideal $\textgoth{a}$ in $A$. In both cases elements of $S^{-1}\textgoth{a}$ are written as $a/s$ with $a \in \textgoth{a}$, $s \notin \textgoth{p}$, but they come from different sets. In the first, module case, $a/s$ is in the quotient of $\textgoth{a} \times (A \setminus\textgoth{p})$, in the second, extension ideal case, $a/s$ is in the quotient of $A \times (A \setminus\textgoth{p})$. We are talking of $A_\textgoth{p}$-modules, not rings, so there can only be an $A$-module and $A_\textgoth{p}$-module isomorphism:
+\[
+  \textgoth{a} \times (A \setminus\textgoth{p}) / \sim_\textgoth{a} \; \; \ni \; a/s \mapsto a/s \; \in \; A \times (A \setminus\textgoth{p}) / \sim_A
+\]
+\qed
+
+\begin{theorem}
+What is $\textgoth{p}_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$.
 
 \begin{theorem}
 Case $\textgoth{a} = \textgoth{p}$, a prime ideal. What is $S^{-1}\textgoth{p}$?
@@ -171,6 +215,7 @@ Proposition 3.5 states, in the language of subscript-$\textgoth{p}$, that $M_\te
 \end{gather*}
 \qed
 
+\noindent
 In P. Y. Gaillard solution to ItCA Exercise 3.19 (viii).
 
 \begin{theorem}
