@@ -11,6 +11,7 @@
 \usepackage{amsthm}
 \usepackage{geometry}
 \usepackage{tikz-cd}
+\usepackage{stmaryrd}
 
 \geometry{
  a4paper,
@@ -143,7 +144,7 @@ What is $\textgoth{p}_\textgoth{p}$?
 \end{theorem}
 
 \noindent
-It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$.
+It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$, that is, the ideal $\textgoth{p}A_\textgoth{p}$.
 
 \begin{theorem}
 Case $\textgoth{a} = \textgoth{p}$, a prime ideal. What is $S^{-1}\textgoth{p}$?
@@ -155,33 +156,163 @@ It can be either the $A_\textgoth{p}$-module $\textgoth{p}_\textgoth{p}$, becaus
    \textgoth{p}_\textgoth{p} = \textgoth{p} \: A_\textgoth{p}
 \]
 \qed
+\begin{theorem}
+When $S=A \setminus \textgoth{p}$, as $A_\textgoth{p}$-modules
+\[
+S^{-1}\textgoth{a} = \textgoth{a}A_\textgoth{p} = \textgoth{a}_\textgoth{p} 
+\]
+\[
+S^{-1}\textgoth{p} = \textgoth{p}A_\textgoth{p} = \textgoth{p}_\textgoth{p} 
+\]
+\end{theorem}
+\qed
 
 \begin{theorem}
+\label{b_q_as_a_q}
 How is $B_\textgoth{q}$ an $A_\textgoth{p}$-module?
 \end{theorem}
 
 \noindent
-Let $g = \psi \circ f$ be the composition $A \rightarrow B \rightarrow T^{-1}B : a \rightarrow f(a) \rightarrow f(a)/1 $. This composition sends $s \in S$ to a unit in $T^{-1}B$, as $(f(s)/1)(1/f(s)) = 1/1$, where $f(s) \in f(S) = f(A \setminus \textgoth{p}) \subseteq B \setminus \textgoth{q} = T$. By the universal property of the ring of fractions, $g$ factorizes
+Let $g = \psi \circ f$ be the composition $A \rightarrow B \rightarrow T^{-1}B : a \rightarrow f(a) \rightarrow f(a)/1 $. This composition sends $s \in S$ to a unit in $T^{-1}B$, as $(f(s)/1)(1/f(s)) = 1/1$, where $f(s) \in f(S) = f(A \setminus \textgoth{p}) \subseteq B \setminus \textgoth{q} = T$. Why the inclusion? If $a \notin \textgoth{p} = f^{-1}(\textgoth{q})$ then $f(a) \notin \textgoth{q}$. By the universal property of the ring of fractions, $g$ factorizes
 \[
      \begin{tikzcd}
-     A \arrow{r}{\phi} \arrow{d}{f} \arrow{dr}{\eta} & S^{-1}A \arrow{d}{h} \\
+     A \arrow{r}{\phi} \arrow{d}{f} \arrow{dr}{g} & S^{-1}A \arrow{d}{h} \\
      B \arrow{r}{\psi} & T^{-1}B
      \end{tikzcd}
 \]
 
 \noindent
-where the recipe for $h$ is given in \textbf{Proposition 3.1} of [ItCA] as $a/s \mapsto g(a)g(s)^{-1} = (f(a)/1)(1/f(s)) = f(a)/f(s)$.
+where the recipe for $h$ is given in \textbf{Proposition 3.1} of ItCA as $a/s \mapsto g(a)g(s)^{-1} = (f(a)/1)(1/f(s)) = f(a)/f(s)$.
 \qed
 
 \begin{theorem}
-How is $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
+What is $B_\textgoth{p}$ ?
 \end{theorem}
 
 \noindent
-The kernel of the composition $A_\textgoth{p} \rightarrow B_\textgoth{q} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$ : $a/s \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$ contains $\textgoth{p} A_\textgoth{p}$ (because $\textgoth{p} = f^{-1}(\textgoth{q})$) so the composition factors through $A_\textgoth{p} / \textgoth{p} A_\textgoth{p} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$: $a/s + \textgoth{p} A_\textgoth{p} \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$. This is a ring homomorphism that makes $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module.
+(For $f: A \mapsto B$ and $\textgoth{p}$ a prime ideal of $A$). \\
+The ring $B$ is an $A$-module by the restriction of scalars. We can localize it in the prime ideal $\textgoth{p}$  of $A$. The cartesian product is $B \times (A \setminus \textgoth{p})$, the relation is 
+\[
+(b, s) \sim (b', s') \iff \exists t \notin \textgoth{p} \; \; t(sb' - s'b) = 0
+\]
+The condition reads
+\[
+f(t)(f(s)b' - f(s')b) = 0
+\]
+The obvious addition 
+\[
+\frac{b}{s} + \frac{b'}{s'} = \frac{s'b + sb'}{ss'} = \frac{f(s')b + f(s)b'}{ss'}
+\]
+The obvious scalar multiplication
+\[
+\frac{a}{s'} \cdot \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
+\]
+\noindent
+And $f$ is an $A$-module homomorphism:
+\[
+f(a'a) = f(a')f(a) = a' \cdot f(a)
+\]
+It gives rise to an $A_\textgoth{p}$-module homomorphism $S^{-1}f: A_\textgoth{p} \rightarrow B_\textgoth{p}$
+\[
+a/s \mapsto f(a)/s
+\]
+See how it is different from the map $A_\textgoth{p} \rightarrow B_\textgoth{q}$
+\[
+a/s \mapsto f(a)/f(s)
+\]
 \qed
 
 \begin{theorem}
+How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module ?
+\end{theorem}
+
+% \noindent
+Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text. The multiplication by a scalar is
+\[
+ \frac{a}{s'} \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
+\]
+
+\qed
+
+\begin{theorem}
+How $(B \otimes_A M)_\textgoth{q} = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}$ ?
+\end{theorem}
+
+\noindent
+\begin{equation*}
+\begin{split}
+(B \otimes_A M)_\textgoth{q} & = B_\textgoth{q} \otimes_B (B \otimes_A M) \\
+                             & = B_\textgoth{q} \otimes_A M \\
+                             & = (B_\textgoth{q} \otimes_{A_\textgoth{p}} A_\textgoth{p}) \otimes_A M \\
+                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} (A_\textgoth{p} \otimes_A M) \\
+                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}
+\end{split}
+\end{equation*}
+\noindent
+The first and the last equalities are applications of Proposition 3.5:
+\[
+  S^{-1}A \otimes_A M \cong S^{-1}M
+\]
+\[
+  A_\textgoth{p} \otimes_A M \cong M_\textgoth{p}
+\]
+\[
+\frac{a}{s} \otimes m \mapsto \frac{am}{s}
+\]
+\qed
+
+\begin{theorem}
+$B_\textgoth{p}$ is not a ring.
+\end{theorem}
+
+\noindent
+The multiplication 
+\[
+\frac{b}{s} \cdot \frac{b'}{s'} = \frac{bb'}{ss'}
+\]
+fails to be distributive over the addition.
+\begin{equation*}
+\begin{split}
+\frac{b''}{s''} \left( \frac{b'}{s'} + \frac{b'}{s'} \right)
+& = \frac{b''}{s''}\frac{sb' + s'b}{ss'} \\
+& = \frac{b''(sb' + s'b)}{ss'} \\
+& = \frac{sb''b' + s'b''b}{ss'} \\
+& = \frac{sb''b'}{ss'} + \frac{s'b''b}{ss'}
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\frac{b''}{s''} \frac{b'}{s'} + \frac{b''}{s''} \frac{b}{s}
+& = \frac{b''b'}{s''s'} + \frac{s'b''b}{s''s} \\
+& = \frac{s'sb''b' + s''s'b''b}{s''s's''s} \\
+& = \frac{f(s')f(s)b''b' + f(s'')f(s')b''b}{s''s's''s} \\
+& = \frac{f(s')f(s)b''b'}{s''s's''s} + \frac{f(s'')f(s')b''b}{s''s's''s}
+\end{split}
+\end{equation*}
+and we cannot cancel here to make them equal.
+\qed
+
+\begin{theorem}
+$B_\textgoth{p} \cong B_\textgoth{q}$ as $A_\textgoth{p}$-modules.    
+\end{theorem}
+
+\noindent
+By Exercise 4: $T = f(S)$ then $S^{-1}B \cong T^{-1}B$ since $f(\textgoth{p}) = \textgoth{q}$.
+\qed
+
+\begin{theorem}
+How is $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ = $B_\textgoth{q}/\textgoth{q}B_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
+\end{theorem}
+
+\noindent
+We know the map $A_\textgoth{p} \rightarrow B_\textgoth{q} : a/s \mapsto f(a)/f(s)$ from \ref{b_q_as_a_q}.
+The kernel of the composition $A_\textgoth{p} \rightarrow B_\textgoth{q} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$ : $a/s \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$ contains $\textgoth{p} A_\textgoth{p}$: 
+element of $\textgoth{p}A_\textgoth{p}$ is $a/s$ where $a \in \textgoth{p}, s \notin \textgoth{p}$ ; it follow that $f(s) \notin \textgoth{q}$ (otherwise $s \in f^{-1}(\textgoth{q}) = \textgoth{p}$); so the image in the first map of $a/s$ is in $\textgoth{q}B_\textgoth{q}$, the kernel of the second map, then $a/s$ is in the kernel of the composition.
+The composition then factors through $A_\textgoth{p} / \textgoth{p} A_\textgoth{p} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$: $a/s + \textgoth{p} A_\textgoth{p} \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$. This is a ring homomorphism that makes $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module.
+\qed
+
+\begin{theorem}
+
 What is $\textgoth{p} M_\textgoth{p}$ ?
 \end{theorem}
 
@@ -261,22 +392,6 @@ For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,
 \qed
 
 \begin{theorem}
-What is $ B_\textgoth{p}$?
-\end{theorem}
-
-% \noindent
-Since $B$ is an $A$-module, $ B_\textgoth{p}$ consists of all elements $b / s$ where $b \in B, s \in A \setminus \textgoth{p}$. This is the standard construction of $S^{-1}A$-module $S^{-1}M$ in the text. It is:
-
-\begin{itemize}
- \item An $A$-module.
- \item An $A_\textgoth{p}$-module: the standard construction.
- \item A $B$-module.
- \item A ring.
-\end{itemize}
-
-\qed
-
-\begin{theorem}
 What is $ \textgoth{p} B_\textgoth{p}$?
 \end{theorem}
 
@@ -284,18 +399,6 @@ What is $ \textgoth{p} B_\textgoth{p}$?
 $B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s)$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
 After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s_i \in A \setminus \textgoth{p}$ that is, $b/s$ where $b \in \textgoth{p} B$ and $s_i \in A \setminus \textgoth{p}$.
 \qed
-
-\begin{theorem}
-$\textgoth{p} B_\textgoth{p}$ is an ideal in $B_\textgoth{p}$.
-\end{theorem}
-
-% \noindent
-As a module, it is an abelian group, then the multiplication property is easily verified.
-\qed
-
-\vspace{1em}
-The ideal $\textgoth{p} A_\textgoth{p}$ was the single maximal ideal in $A_\textgoth{p}$. We do not know this for $\textgoth{p} B_\textgoth{p}$ in $B_\textgoth{p}$.
-
 
 \begin{theorem}
 How is $A_\textgoth{p}$ an $A$-module ?
@@ -328,18 +431,6 @@ After bringing to a common denominator, this is
 \]
 \noindent
 with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
-
-\qed
-
-\begin{theorem}
-How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module ?
-\end{theorem}
-
-% \noindent
-Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text. The multiplication by a scalar is
-\[
- \frac{a}{s'} \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
-\]
 
 \qed
 
