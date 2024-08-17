@@ -90,7 +90,7 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \noindent
 \textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
 \qed
-
+p00000000000000000000000
 \begin{theorem}
 What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
 \end{theorem}
@@ -207,6 +207,12 @@ The obvious scalar multiplication
 \[
 \frac{a}{s'} \cdot \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
 \]
+\qed
+
+\begin{theorem}
+How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module?
+\end{theorem}
+
 \noindent
 And $f$ is an $A$-module homomorphism:
 \[
@@ -220,49 +226,11 @@ See how it is different from the map $A_\textgoth{p} \rightarrow B_\textgoth{q}$
 \[
 a/s \mapsto f(a)/f(s)
 \]
+By the restriction of scalars, $B_\textgoth{p}$ is an $A_\textgoth{p}$-module.
 \qed
 
 \begin{theorem}
-How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module ?
-\end{theorem}
-
-% \noindent
-Definition of the $S^{-1}M$ as $S^{-1}A$-module in the text. The multiplication by a scalar is
-\[
- \frac{a}{s'} \frac{b}{s} = \frac{ab}{s's} = \frac{f(a)b}{s's}
-\]
-
-\qed
-
-\begin{theorem}
-How $(B \otimes_A M)_\textgoth{q} = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}$ ?
-\end{theorem}
-
-\noindent
-\begin{equation*}
-\begin{split}
-(B \otimes_A M)_\textgoth{q} & = B_\textgoth{q} \otimes_B (B \otimes_A M) \\
-                             & = B_\textgoth{q} \otimes_A M \\
-                             & = (B_\textgoth{q} \otimes_{A_\textgoth{p}} A_\textgoth{p}) \otimes_A M \\
-                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} (A_\textgoth{p} \otimes_A M) \\
-                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}
-\end{split}
-\end{equation*}
-\noindent
-The first and the last equalities are applications of Proposition 3.5:
-\[
-  S^{-1}A \otimes_A M \cong S^{-1}M
-\]
-\[
-  A_\textgoth{p} \otimes_A M \cong M_\textgoth{p}
-\]
-\[
-\frac{a}{s} \otimes m \mapsto \frac{am}{s}
-\]
-\qed
-
-\begin{theorem}
-$B_\textgoth{p}$ is not a ring.
+$B_\textgoth{p}$ is a ring.
 \end{theorem}
 
 \noindent
@@ -270,35 +238,75 @@ The multiplication
 \[
 \frac{b}{s} \cdot \frac{b'}{s'} = \frac{bb'}{ss'}
 \]
-fails to be distributive over the addition.
+is distributive over the addition.
 \begin{equation*}
 \begin{split}
-\frac{b''}{s''} \left( \frac{b'}{s'} + \frac{b'}{s'} \right)
-& = \frac{b''}{s''}\frac{sb' + s'b}{ss'} \\
-& = \frac{b''(sb' + s'b)}{ss'} \\
-& = \frac{sb''b' + s'b''b}{ss'} \\
-& = \frac{sb''b'}{ss'} + \frac{s'b''b}{ss'}
+\frac{b''}{s''} \left( \frac{b'}{s'} + \frac{b}{s} \right)
+& = \frac{b''}{s''}\frac{sb' + s'b}{s's} \\
+& = \frac{b''(sb' + s'b)}{s''s's'} \\
+& = \frac{sb''b' + s'b''b}{s''s's} \\
+& = \frac{b''b'}{s''s'} + \frac{b''b}{s''s}
 \end{split}
 \end{equation*}
 \begin{equation*}
 \begin{split}
 \frac{b''}{s''} \frac{b'}{s'} + \frac{b''}{s''} \frac{b}{s}
-& = \frac{b''b'}{s''s'} + \frac{s'b''b}{s''s} \\
-& = \frac{s'sb''b' + s''s'b''b}{s''s's''s} \\
-& = \frac{f(s')f(s)b''b' + f(s'')f(s')b''b}{s''s's''s} \\
-& = \frac{f(s')f(s)b''b'}{s''s's''s} + \frac{f(s'')f(s')b''b}{s''s's''s}
+& = \frac{s''sb''b' + s''s'b''b}{s''s's''s} \\
+& = \frac{f(s'')f(s)b''b' + f(s'')f(s')b''b}{s''s's''s} \\
+& = \frac{f(s'')f(s)b''b'}{s''s's''s} + \frac{f(s'')f(s')b''b}{s''s's''s}
 \end{split}
 \end{equation*}
-and we cannot cancel here to make them equal.
+How can we cancel here? In a general $S^{-1}A$-module $S^{-1}M$
+\[
+\frac{f(s)m}{s} = \frac{s \cdot m}{s} = \frac{s}{s} \cdot \frac{m}{1} = \frac{1}{1} \cdot \frac{m}{1} = \frac{m}{1}
+\]
+With this cancellation rule, both sides of the distributivity become equal.
 \qed
 
 \begin{theorem}
-$B_\textgoth{p} \cong B_\textgoth{q}$ as $A_\textgoth{p}$-modules.    
+$S^{-1}B$ (an $S^{-1}A$-module)  is a ring.
 \end{theorem}
 
 \noindent
-By Exercise 4: $T = f(S)$ then $S^{-1}B \cong T^{-1}B$ since $f(\textgoth{p}) = \textgoth{q}$.
+By argument identical to that for the $B_\textgoth{p}$ ring.
 \qed
+
+\begin{theorem}
+The ring $f(S)^{-1}B$.
+\end{theorem}
+
+\noindent
+The subset $f(S)$ of the ring $B$ is multiplicatively closed, and we can take the ring of fractions. The construction starts from $B \times f(S)$,
+\[
+(b, f(s)) \sim (b', f(s')) \iff \exists u \in S \; f(u)(f(s')b - f(s)b') = 0
+\]
+\qed
+
+\begin{theorem}
+The rings $S^{-1}B$ and $f(S)^{-1}B$ are isomorphic via $b/s \mapsto b/f(s)$
+\end{theorem}
+
+\noindent
+The well-definition and injectivity are easily verified and the surjectivity is obvious.
+\qed
+
+\begin{theorem}
+The contraction of $S^{-1}\textgoth{p}$ is $\textgoth{p}$.
+\end{theorem}
+
+\noindent
+\begin{equation*}
+\begin{split}
+\{a: a/1 \in S^{-1}\textgoth{p}\} & = \{ a: a/1 = a'/s' \; \text{for some} \; a' \in \textgoth{p}, s' \notin \textgoth{p} \} \\
+& = \{a: \exists u \in S \; (as' - a')u = 0 \} \\
+& = \{a: \exists u \in S, s' \in S, a' \in \textgoth{p} \quad as'u = a'u  \}
+\end{split}
+\end{equation*}
+The set finally is $\textgoth{p}$: \\
+$\implies$: $as'u \in \textgoth{p}$, so $a \in \textgoth{p}$ or $s'u \in \textgoth{p}$ but $\textgoth{p} \cap S = \emptyset$; must be $a \in \textgoth{p}$. \\
+$\impliedby$: $a \in \textgoth{p}$; $(a \cdot 1 - a)\cdot 1 = 0$, so $a$ is in the set. \\
+\qed
+
 
 \begin{theorem}
 How is $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ = $B_\textgoth{q}/\textgoth{q}B_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
@@ -335,7 +343,8 @@ How
 \end{theorem}
 
 \noindent
-Proposition 3.5 states, in the language of subscript-$\textgoth{p}$, that $M_\textgoth{p} \cong A_\textgoth{p} \otimes_A M$ over $A_\textgoth{p}$. Here $(B \otimes_A M)_\textgoth{q} \cong B_\textgoth{q} \otimes_B (B \otimes_A M)$. Then
+Proposition 3.5 states, in the language of subscript-$\textgoth{p}$, that $M_\textgoth{p} \cong A_\textgoth{p} \otimes_A M$ over $A_\textgoth{p}$. Here $(B \otimes_
+A M)_\textgoth{q} \cong B_\textgoth{q} \otimes_B (B \otimes_A M)$ over $B_\textgoth{p-}$. Then
 
 \begin{gather*}
 \frac{B_\textgoth{q} \otimes_B (B \otimes_A M)}{(\textgoth{q} B_\textgoth{q})(B_\textgoth{q} \otimes_B (B \otimes_A M))}
@@ -347,7 +356,62 @@ Proposition 3.5 states, in the language of subscript-$\textgoth{p}$, that $M_\te
 \qed
 
 \noindent
+The first equality is from Exercise 2.2: $M/\textgoth{a}M \cong 
+A/\textgoth{a} \otimes_A M$. 
 In P. Y. Gaillard solution to ItCA Exercise 3.19 (viii).
+
+\begin{theorem}
+How
+\[
+\frac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}} \otimes_A M 
+\cong
+\frac{M_\textgoth{p}}{\textgoth{p} M_\textgoth{p}}
+\]
+?
+\end{theorem}
+
+\begin{gather*}
+\frac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}} \otimes_A M 
+\cong 
+\frac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}} \otimes_{A_\textgoth{p}} A=_\textgoth{p} \otimes_A M 
+\cong
+\frac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}} \otimes_{A_\textgoth{p}} M_\textgoth{p} 
+\cong
+\frac{M_\textgoth{p}}{\textgoth{p} M_\textgoth{p}}
+\end{gather*}
+\noindent
+The second by Proposition 3.5, the third by Exercise 2.2. \\
+In Y. P. Gaillard solution of ItCA Exercise 3.19 (viii).
+\qed
+
+\begin{theorem}
+How $(B \otimes_A M)_\textgoth{q} = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}$ ?
+\end{theorem}
+
+\noindent
+\begin{equation*}
+\begin{split}
+(B \otimes_A M)_\textgoth{q} & = B_\textgoth{q} \otimes_B (B \otimes_A M) \\
+                             & = B_\textgoth{q} \otimes_A M \\
+                             & = (B_\textgoth{q} \otimes_{A_\textgoth{p}} A_\textgoth{p}) \otimes_A M \\
+                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} (A_\textgoth{p} \otimes_A M) \\
+                             & = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}
+\end{split}
+\end{equation*}
+\noindent
+The first and the last equalities are applications of Proposition 3.5:
+\[
+  S^{-1}A \otimes_A M \cong S^{-1}M
+\]
+\[
+  A_\textgoth{p} \otimes_A M \cong M_\textgoth{p}
+\]
+\[
+\frac{a}{s} \otimes m \mapsto \frac{am}{s}
+\]
+In Y. P. Gaillard solution to ItCA Exercise 3.19 (iii).
+\qed
+
 
 \begin{theorem}
 The diagram
