@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem{theorem}{Theorem}
+
+\title{Exercise 3.21}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px}
+
+\textbf{Exercise 3.21.i}. 
+Show that $\phi^*: \text{Spec}(S^{-1}A) \rightarrow \text{Spec}(A)$ is a homeomorphism of $\text{Spec}(S^{-1}A)$ onto its image in $X = \text{Spec}(A)$.
+
+\vspace*{10px} 
+
+\noindent
+We want to prove that for $D$ closed in $\text{Spec}(S^{-1}A)$ there is $C$ closed in $\text{Spec}(A)$ and reverse, that the equation holds
+\[
+C \cup \phi^*(\text{Spec}(S^{-1}A)) = \phi^*(D)
+\]
+We take
+\[
+C = V(\textgoth{a}), \quad D = V(S^{-1}\textgoth{a})
+\]
+That is, we are going to prove that
+\[
+V(\textgoth{a}) \cap \phi^*(\text{Spec}(S^{-1}\textgoth{a}))= \phi^*(V(S^{-1}\textgoth{a}))
+\]
+Recalling that $S^{-1}\textgoth{p} \xmapsto{\phi^*} \textgoth{p}$, the right are all prime ideals not meeting $S$ and holding $S^{-1}\textgoth{p} \supseteq S^{-1}\textgoth{a}$. By the fact that this happens iff $\textgoth{p} \supseteq \textgoth{a}$, they are all prime ideals not meeting $S$ and containing \textgoth{a}. Which is precisely the left.
+
+\noindent
+Now $\phi^*$ maps closed files to closed files in any direction.
+\qed
+
+\vspace*{10px}
+
+\textbf{Exercise 3.21.ii}. 
+Let $f: A \rightarrow B$ be a ring homomorphism...
+
+\vspace*{10px} 
+
+\begin{tikzcd}
+X \arrow[r, equal]
+& \textrm{Spec}(A) 
+  & \textrm{Spec}(B) \arrow[l, "f^*"'] \arrow[r, equal] 
+  & Y \\
+S^{-1}X \arrow[r, equal]
+  & \phi^*(\textrm{Spec}(S^{-1}A)) \arrow[u, hook] 
+  & \psi^*(\textrm{Spec}(S^{-1}B)) \arrow[u, hook] 
+  & S^{-1}Y \arrow[l, equal] \\
+X \arrow[r, equal]
+  & \textrm{Spec}(S^{-1}A) \arrow[u, leftrightarrow] 
+  & \textrm{Spec}(S^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']  
+  & Y \arrow[l, equal] \\
+\end{tikzcd}
+
+ 
+
+\end{document}
