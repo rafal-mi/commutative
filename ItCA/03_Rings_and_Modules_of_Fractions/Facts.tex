@@ -12,6 +12,7 @@
 \usepackage{geometry}
 \usepackage{tikz-cd}
 \usepackage{stmaryrd}
+\usepackage{amsmath}
 
 \geometry{
  a4paper,
@@ -288,6 +289,61 @@ The rings $S^{-1}B$ and $f(S)^{-1}B$ are isomorphic via $b/s \mapsto b/f(s)$
 
 \noindent
 The well-definition and injectivity are easily verified and the surjectivity is obvious.
+\qed
+
+\begin{theorem}
+The homomorphisms $B \rightarrow S^{-1}B: b \mapsto b/s$ and $B \rightarrow f(S)^{-1}B: b \mapsto b/f(s)$.
+\end{theorem}
+
+\noindent
+The second is natural as $f(S)$ is a multiplicatively closed subset of $B$. The first can arise from the isomorphism of both rings, making the diagram
+\[
+\begin{tikzcd}
+  & S^{-1}B \arrow[dd, "\cong"] \\
+  B \arrow[ur] \arrow[dr] \\
+  & f(S)^{-1}B
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}
+  & b/s \arrow[dd, mapsto] \\
+  b \arrow[ur] \arrow[dr, mapsto] \\
+  & b/f(s)
+\end{tikzcd}
+\]
+commutative, or can be verified directly, and the diagram after it. The top homomorphism 
+\qed
+
+\begin{theorem}
+What are general ideals of $f(S)^{-1}B$ and $S^{-1}B$?
+\end{theorem}
+
+\noindent
+Every ideal of $f(S)^{-1}B$ is an extended ideal $f(S)^{-1}\textgoth{b}$ = $\{b/f(s): b\in \textgoth{b}, s \in S\}$. The isomorphic set in $S^{-1}B$ is $\{b/s: b\in \textgoth{b}, s \in S\}$.
+\qed
+
+
+\begin{theorem}
+How does $(S^{-1}f)^*: \textnormal{Spec}(S^{-1}B) \rightarrow \text{Spec}(S^{-1}B)$ work? 
+\end{theorem}
+
+\noindent
+We show that $(S^{-1}f)^*(S^{-1}\textgoth{q}) = \textgoth{p}$ where $\textgoth{p} = f^{-1}(\textgoth{q})$.
+\begin{equation*}
+\begin{split}
+  (S^{-1}f)^*(S^{-1}\textgoth{q}) 
+    & = (S^{-1}f)^*(\{ b/s: b \in \textgoth{q}, s \in S\}) \\
+    & = \{ a/s: (S^{-1}f)(a/s) \in S^{-1}\textgoth{b} \} \\
+    & = \{ a/s: f(a)/s \in \textgoth{b} \}
+\end{split}
+\end{equation*}
+We can show that this is $\textgoth{p} = f^{-1}(\textgoth{q})$. \\
+
+The $\subseteq$: $f(a)/s = b/s'$ for some $b \in \textgoth{q}, s \in S$; we move to $f(S)^{-1}B$; $f(a)/f(s) = b/f(s')$; $(f(a)f(s') - bf(s))f(u) = 0$ for some $u \in S$; $f(a)f(s')f(u) = bf(s)f(u) \in \textgoth{b}$; $f(a) \in \textgoth{q}$; $a \in f^{-1}(\textgoth{q}) = \textgoth{p}$; $a/s \in S^{-1}\textgoth{p}$. 
+
+What if we did not move to $f(S)^{-1}B$? $u(s'f(a) - sb) = 0$ in the $S^{-1}A$-module $S^{-1}B$; $us'f(a) = usb$. But what is the multiplication by scalar from $A$? It is multiplication by $f$ of it. $f(u)f(s')f(a) = f(u)f(s)b \in \textgoth{q}$ ... We proceed the same way.
+
+The $\supseteq$: $a/s \in S^{-1}\textgoth{p}$; $a \in \textgoth{p}$; $f(a) \in \textgoth{q}$; $f(a)/s \in S^{-1}\textgoth{q}$.
 \qed
 
 \begin{theorem}
