@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem{theorem}{Theorem}
+
+\title{Exercise 3.21}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+M.F. Atiyah, I.G. MacDonald \emph{Introduction to Commutative Algebra}
+\end{center}
+
+\vspace*{10px}
+
+\textbf{Exercise 3.21.i}. 
+Show that $\phi^*: \text{Spec}(S^{-1}A) \rightarrow \text{Spec}(A)$ is a homeomorphism of $\text{Spec}(S^{-1}A)$ onto its image in $X = \text{Spec}(A)$.
+
+\vspace*{10px} 
+
+\noindent
+We want to prove that for $D$ closed in $\text{Spec}(S^{-1}A)$ there is $C$ closed in $\text{Spec}(A)$ and reverse, that the equation holds
+\[
+C \cup \phi^*(\text{Spec}(S^{-1}A)) = \phi^*(D)
+\]
+We take
+\[
+C = V(\textgoth{a}), \quad D = V(S^{-1}\textgoth{a})
+\]
+That is, we are going to prove that
+\[
+V(\textgoth{a}) \cap \phi^*(\text{Spec}(S^{-1}\textgoth{a}))= \phi^*(V(S^{-1}\textgoth{a}))
+\]
+Recalling that $S^{-1}\textgoth{p} \xmapsto{\phi^*} \textgoth{p}$, the right are all prime ideals not meeting $S$ and holding $S^{-1}\textgoth{p} \supseteq S^{-1}\textgoth{a}$. By the fact that this happens iff $\textgoth{p} \supseteq \textgoth{a}$, they are all prime ideals not meeting $S$ and containing \textgoth{a}. Which is precisely the left.
+
+\noindent
+Now $\phi^*$ maps closed files to closed files in any direction.
+\qed
+
+\vspace*{10px}
+
+\textbf{Exercise 3.21.ii}. 
+Let $f: A \rightarrow B$ be a ring homomorphism...
+
+\vspace*{10px} 
+
+\begin{tikzcd}
+X \arrow[r, equal]
+& \textrm{Spec}(A) 
+  & \textrm{Spec}(B) \arrow[l, "f^*"'] \arrow[r, equal] 
+  & Y \\
+S^{-1}X \arrow[r, equal]
+  & \phi^*(\textrm{Spec}(S^{-1}A)) \arrow[u, hook] 
+  & \psi^*(\textrm{Spec}(S^{-1}B)) \arrow[u, hook] 
+  & S^{-1}Y \arrow[l, equal] \\
+X \arrow[r, equal]
+  & \textrm{Spec}(S^{-1}A) \arrow[u, leftrightarrow] 
+  & \textrm{Spec}(S^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']  
+  & Y \arrow[l, equal] \\
+\end{tikzcd}
+
+\begin{tikzcd}
+\textgoth{p} 
+  & \textgoth{q} \arrow[l, "f^*"', mapsto] \\
+\textgoth{p} \arrow[u, equal] 
+  & \textgoth{q} \arrow[u, equal] \\
+S^{-1}\textgoth{p} \arrow[u, leftrightarrow] 
+  & S^{-1}\textgoth{q} \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"', mapsto] \\
+\end{tikzcd}
+
+\noindent
+That $(S^{-1}f)^* : \textrm{Spec}(S^{-1}B) \rightarrow \textrm{Spec}(S^{-1}A)$ is the restriction of $f^*$ to $S^{-1}Y$ we have already proved in Facts, showing the action of $(S^{-1}f)^*$:
+\[
+    (S^{-1}f)^*: S^{-1}\textgoth{q} \mapsto S^{-1}\textgoth{p}
+\]
+
+\noindent
+What is $S^{-1}X = \phi^*(\textrm{Spec}(S^{-1}A))$? All prime ideals of $A$ not meeting $S$. \\ 
+What is $f^{*-1}(S^{-1}X) = f^{*-1}(\phi^*(\textrm{Spec}(S^{-1}A)))$? All prime ideals of $B$ whose preimages in $A$ do not meet $S$. \\
+What is $S^{-1}X = \psi^*(\textrm{Spec}(S^{-1}B))$? All prime ideals of $B$ not meeting $f(S)$. \\ 
+We show that the the last two sets are equal.\\
+$\supseteq$: If \textgoth{q} does not meet $f(S)$, may its preimage $f^{-1}(\textgoth{q})$ meet $S$? Let $s \in f^{-1}(\textgoth{q})$; $f(s) \in \textgoth{q}$; now $\textgoth{q}$ meets $f(S)$, a contradiction. So it cannot. \\
+$\subseteq$: Let's not let the preimage $f^{-1}(\textgoth{q})$ of a prime ideal $\textgoth{q}$ of
+$B$ meet $S$. May $\textgoth{q}$ meet $f(B)$? $f(s) \in \textgoth{q}$; $s\in f^{-1}(\textgoth{q}$; now the preimage $f^{-1}(\textgoth{q})$ in $A$ meets $S$, a contradiction. So it cannot. 
+
+
+\vspace*{10px}
+
+\textbf{Exercise 3.21.iii}. 
+Let $\textgoth{a}$ be an ideal of $A$ and let $\textgoth{b} = \textgoth{a}^e$ be its extension in $B$...
+
+\vspace*{10px} 
+
+Let \textgoth{a} be an ideal of $A$ and let $\textgoth{b} = \textgoth{a}^e$ be its extension in $B$. What is the homomorphism?
+\[
+  \tilde{f}: A/\textgoth{a} \rightarrow B/\textgoth{b} 
+\]
+
+\noindent
+Recall what does a homomorphism need to factor through a quotient?
+
+\begin{tikzcd}
+  A \arrow[rr, "\phi"] \arrow[rd, "\pi"] & & B \arrow[ld, "\tilde{\phi}"] \\
+  & A/\textgoth{q} \\
+\end{tikzcd}
+
+\noindend
+The map $\tilde{\phi}$ has to be defined on representatives and cannot differ between them.
+\[
+  \tilde{\phi}(a + \textgoth{a}) = \tilde{\phi}(a' + \textgoth{a})
+\]
+if $a + \textgoth{a} = a' + \textgoth{a}$ iff $a - a' \in \textgoth{a}$. \\
+We define $\tilde{\phi}$ by $\tilde{\phi}(a + \textgoth{a}) = \phi(a)$ so it has to be
+\[
+  \phi(a) = \phi(a') \;\; \text{if} \;\; a - a' \in \textgoth{a} 
+\]
+\[
+  \phi(a - a') = 0 \;\; \text{if} \;\; a - a' \in \textgoth{a}
+\]
+\[
+  \phi(a) = 0 \;\; \text{if} \;\; a \in \textgoth{a}
+\]
+\[
+  \textrm{ker} \; \phi \supseteq \textgoth{a}
+\]
+
+\noindent
+To factor through the quotient by an ideal, the homomorphism's kernel must contain this ideal. \\
+A homomorphism factors through any ideal contained in its kernel.
+
+If $\textgoth{a} \subseteq \phi^{-1}(0)$ then $\phi(a) = 0$ for $a \in \textgoth{a}$ then $\phi(a - a') = 0$ for $a - a' \in \textgoth{a}$ then $\phi(a) = \phi(a')$ for $a + \textgoth{a} = a' + \textgoth{a}$ and we can say $\tilde{\phi}(a + \textgoth{a}) = \phi(a)$.
+
+We return to $f: A \rightarrow B$, $\textgoth{a} = f^{-1}(\textgoth{b})$, $\textgoth{b}$ an ideal of $B$.
+\[
+  A \xrightarrow{f} B \xrightarrow{\rho} B/\textgoth{b}
+\]
+
+\noindent
+
+Does the kernel contain $\textgoth{a}$? If $a \in \textgoth{a}$ then $a \mapsto f(a) \mapsto f(a) + \textgoth{b}$, but $f(a) \in \textgoth{b}$ so $a$ maps to zero and is in the kernel of this composition homomorphism, which then factors through the quotient:
+
+\begin{tikzcd}
+  A \arrow[r, "f"] \arrow[rd, two heads] & B \arrow[r, "\rho", two heads] & B / \textgoth{b} \\
+  & A / \textgoth{a} \arrow[ru] &
+\end{tikzcd}
+
+\begin{tikzcd}
+  a \arrow[r, "f", mapsto] \arrow[rd, mapsto] & f(a) \arrow[r, "\rho", mapsto] & f(a) + \textgoth{b} \\
+  & a + \textgoth{a} \arrow[ru, mapsto] &
+\end{tikzcd}
+
+\begin{tikzcd}[column sep=large]
+  A \arrow[r, "f"] \arrow[d, "\pi", two heads] 
+    & B \arrow[d, "\rho", two heads] \\
+  A/\textgoth{a} \arrow[r, "\tilde{f}"] & B/\textgoth{b}
+\end{tikzcd}
+\quad
+\begin{tikzcd}[column sep=large]
+  \textrm{Spec}(A) 
+    & \textrm{Spec}(B) \arrow[l, "f^*"'] \\
+  \pi^*(\textrm{Spec}(A/\textgoth{a}) \arrow[u, hook] 
+    & \rho^*(\textrm{Spec}(B/\textgoth{b}) \arrow[l] \arrow[u, hook] \\
+  \textrm{Spec}(A/\textgoth{a}) \arrow[u, leftrightarrow] \arrow[uu, "\pi^*", bend left=75]
+    & \textrm{Spec}(B/\textgoth{b}) \arrow[l, "\tilde{f}^*"'] , \arrow[u, leftrightarrow] \arrow[uu, "\rho^*"', bend right=75]
+\end{tikzcd}
+
+\end{document}
