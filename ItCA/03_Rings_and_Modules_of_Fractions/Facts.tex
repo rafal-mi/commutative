@@ -50,15 +50,15 @@ If $0 \in S$, then $S^{-1}A$ is a trivial ring.
 \end{theorem}
 
 \noindent
-\textit{Proof.} Any $(a, s), (a', s')$ are related because $(as' - a's) \cdot 0 = 0$ with $0 \in S$. \qed
+\textit{Proof.} Any $(a, s), (a', s')$ are related because $(as' - a's) \cdot 0 = 0$ with $0 \in S$. \
+
+\bigskip
 
 \begin{theorem}
 $A$ a PID, the equivalence relation in $ A \times S $ is: $ (a, s) \equiv (a', s') $ iff $ as' = a's $. \qed
 \end{theorem}
 
-
-\vspace{2em}
-
+\bigskip
 \begin{theorem}
 For $A$ a field, and $S = \{-1, 1\}$, $S^{-1}A \cong A$.
 \end{theorem}
@@ -66,6 +66,7 @@ For $A$ a field, and $S = \{-1, 1\}$, $S^{-1}A \cong A$.
 \noindent
 \textit{Proof.} It is easily verified that the standard isomorphism from $A$ to $S^{-1}A$ is 1-1 and onto. \qed
 
+\bigskip
 \begin{theorem}
 For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing zero, $S^{-1}A \cong A$.
 \end{theorem}
@@ -73,6 +74,7 @@ For $A$ a field, and $S$ a multiplicatively closed subset of $A$ not containing 
 \noindent
 \textit{Proof.} The standard homomorphism $f:a \mapsto a/1$ of $A$ into $S^{-1}A$ is injectve: if $a/1 = a'/1$ then $a \cdot 1 = a1 \cdot 1$, then $a = a'$. It is surjective: $f(as^{-1}) = f(a)f(s^{-1}) = (a/1)(s^{-1}/1) = \ldots$, but $s^{-1}/1 = 1/s$ as $s^{-1}s = 1 \cdot 1$; continuing, $\ldots = (a/1)(1/s) = a/s$. \qed
 
+\bigskip
 \begin{theorem}
 For $A$ a field, the ring of fractions and the field of fractions are isomorphic.
 \end{theorem}
@@ -80,10 +82,12 @@ For $A$ a field, the ring of fractions and the field of fractions are isomorphic
 \noindent
 \textit{Proof.} For isomorphism of $A$ with its field of fractions, see Math Exchange 79188. About the isomorphism with its ring of fractions, is the fact above. \qed
 
+\bigskip
 \begin{example}
 Some example.
 \end{example}
 
+\vspace{.2em}
 \begin{theorem}
 The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fractions $T^{-1}(A/I)$, where $T$ is the image of $S$ in $A/I$, equals the module of fractions $S^{-1}(A/I)$.
 \end{theorem} 
@@ -91,7 +95,8 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \noindent
 \textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
 \qed
-p00000000000000000000000
+
+\bigskip
 \begin{theorem}
 What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
 \end{theorem}
@@ -110,6 +115,7 @@ Then $\textgoth{a}A_\textgoth{p}$ must be the generalization
 
 \qed
 
+\bigskip
 \begin{theorem}
 What is $S^{-1}\textgoth{a}$?
 \end{theorem}
@@ -121,6 +127,7 @@ It can be either an $S^{-1}A$-module $S^{-1}\textgoth{a}$, because $\textgoth{a}
 \]
 \qed
 
+\bigskip
 \begin{theorem}
 What is $\textgoth{a}_\textgoth{p}$?
 \end{theorem}
@@ -128,7 +135,7 @@ What is $\textgoth{a}_\textgoth{p}$?
 \noindent
 It is the $A$-module $\textgoth{a}$ localized at $\textgoth{p}$. It is an $A_\textgoth{p}$-module. We also use this notation for the ideal $S^{-1}\textgoth{a}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$. How are they isomorphic? $a/s \mapsto a/s$ with $a \in \textgoth{a}, s \notin $.  Of what it is an isomorphism? Of $A$-modules, of $A_\textgoth{p}$-modules. They are not rings.
 
-
+\bigskip
 \begin{theorem}
 What is $S^{-1}\textgoth{a}$ in case $S = A \setminus \textgoth{p}$?
 \end{theorem}
@@ -147,6 +154,7 @@ What is $\textgoth{p}_\textgoth{p}$?
 \noindent
 It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$, that is, the ideal $\textgoth{p}A_\textgoth{p}$.
 
+\bigskip
 \begin{theorem}
 Case $\textgoth{a} = \textgoth{p}$, a prime ideal. What is $S^{-1}\textgoth{p}$?
 \end{theorem}
@@ -157,6 +165,8 @@ It can be either the $A_\textgoth{p}$-module $\textgoth{p}_\textgoth{p}$, becaus
    \textgoth{p}_\textgoth{p} = \textgoth{p} \: A_\textgoth{p}
 \]
 \qed
+
+\bigskip
 \begin{theorem}
 When $S=A \setminus \textgoth{p}$, as $A_\textgoth{p}$-modules
 \[
@@ -168,6 +178,7 @@ S^{-1}\textgoth{p} = \textgoth{p}A_\textgoth{p} = \textgoth{p}_\textgoth{p}
 \end{theorem}
 \qed
 
+\bigskip
 \begin{theorem}
 \label{b_q_as_a_q}
 How is $B_\textgoth{q}$ an $A_\textgoth{p}$-module?
@@ -210,6 +221,7 @@ The obvious scalar multiplication
 \]
 \qed
 
+\bigskip
 \begin{theorem}
 How is $B_\textgoth{p}$ an $A_\textgoth{p}$-module?
 \end{theorem}
@@ -230,6 +242,7 @@ a/s \mapsto f(a)/f(s)
 By the restriction of scalars, $B_\textgoth{p}$ is an $A_\textgoth{p}$-module.
 \qed
 
+\bigskip
 \begin{theorem}
 $B_\textgoth{p}$ is a ring.
 \end{theorem}
@@ -264,6 +277,7 @@ How can we cancel here? In a general $S^{-1}A$-module $S^{-1}M$
 With this cancellation rule, both sides of the distributivity become equal.
 \qed
 
+\bigskip
 \begin{theorem}
 $S^{-1}B$ (an $S^{-1}A$-module)  is a ring.
 \end{theorem}
@@ -272,6 +286,7 @@ $S^{-1}B$ (an $S^{-1}A$-module)  is a ring.
 By argument identical to that for the $B_\textgoth{p}$ ring.
 \qed
 
+\bigskip
 \begin{theorem}
 The ring $f(S)^{-1}B$.
 \end{theorem}
@@ -283,6 +298,7 @@ The subset $f(S)$ of the ring $B$ is multiplicatively closed, and we can take th
 \]
 \qed
 
+\bigskip
 \begin{theorem}
 The rings $S^{-1}B$ and $f(S)^{-1}B$ are isomorphic via $b/s \mapsto b/f(s)$
 \end{theorem}
@@ -291,6 +307,7 @@ The rings $S^{-1}B$ and $f(S)^{-1}B$ are isomorphic via $b/s \mapsto b/f(s)$
 The well-definition and injectivity are easily verified and the surjectivity is obvious.
 \qed
 
+\bigskip
 \begin{theorem}
 The homomorphisms $B \rightarrow S^{-1}B: b \mapsto b/s$ and $B \rightarrow f(S)^{-1}B: b \mapsto b/f(s)$.
 \end{theorem}
@@ -314,6 +331,7 @@ The second is natural as $f(S)$ is a multiplicatively closed subset of $B$. The 
 commutative, or can be verified directly, and the diagram after it. The top homomorphism 
 \qed
 
+\bigskip
 \begin{theorem}
 What are general ideals of $f(S)^{-1}B$ and $S^{-1}B$?
 \end{theorem}
@@ -323,6 +341,7 @@ Every ideal of $f(S)^{-1}B$ is an extended ideal $f(S)^{-1}\textgoth{b}$ = $\{b/
 \qed
 
 
+\bigskip
 \begin{theorem}
 How does $(S^{-1}f)^*: \textnormal{Spec}(S^{-1}B) \rightarrow \text{Spec}(S^{-1}B)$ work? 
 \end{theorem}
@@ -337,15 +356,18 @@ We show that $(S^{-1}f)^*(S^{-1}\textgoth{q}) = \textgoth{p}$ where $\textgoth{p
     & = \{ a/s: f(a)/s \in \textgoth{b} \}
 \end{split}
 \end{equation*}
-We can show that this is $\textgoth{p} = f^{-1}(\textgoth{q})$. \\
+We can show that this is $S^{-1}\textgoth{p}$. \\
 
 The $\subseteq$: $f(a)/s = b/s'$ for some $b \in \textgoth{q}, s \in S$; we move to $f(S)^{-1}B$; $f(a)/f(s) = b/f(s')$; $(f(a)f(s') - bf(s))f(u) = 0$ for some $u \in S$; $f(a)f(s')f(u) = bf(s)f(u) \in \textgoth{b}$; $f(a) \in \textgoth{q}$; $a \in f^{-1}(\textgoth{q}) = \textgoth{p}$; $a/s \in S^{-1}\textgoth{p}$. 
 
 What if we did not move to $f(S)^{-1}B$? $u(s'f(a) - sb) = 0$ in the $S^{-1}A$-module $S^{-1}B$; $us'f(a) = usb$. But what is the multiplication by scalar from $A$? It is multiplication by $f$ of it. $f(u)f(s')f(a) = f(u)f(s)b \in \textgoth{q}$ ... We proceed the same way.
 
 The $\supseteq$: $a/s \in S^{-1}\textgoth{p}$; $a \in \textgoth{p}$; $f(a) \in \textgoth{q}$; $f(a)/s \in S^{-1}\textgoth{q}$.
+
+Now we know that $(S^{-1}f)^*oll$ is the restriction of $f^*$ to $\psi^*(\textrm{Spec}(S^{-1}B)) = S^{-1}Y$
 \qed
 
+\bigskip
 \begin{theorem}
 The contraction of $S^{-1}\textgoth{p}$ is $\textgoth{p}$.
 \end{theorem}
@@ -363,7 +385,7 @@ $\implies$: $as'u \in \textgoth{p}$, so $a \in \textgoth{p}$ or $s'u \in \textgo
 $\impliedby$: $a \in \textgoth{p}$; $(a \cdot 1 - a)\cdot 1 = 0$, so $a$ is in the set. \\
 \qed
 
-
+\bigskip
 \begin{theorem}
 How is $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ = $B_\textgoth{q}/\textgoth{q}B_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module?
 \end{theorem}
@@ -375,8 +397,8 @@ element of $\textgoth{p}A_\textgoth{p}$ is $a/s$ where $a \in \textgoth{p}, s \n
 The composition then factors through $A_\textgoth{p} / \textgoth{p} A_\textgoth{p} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$: $a/s + \textgoth{p} A_\textgoth{p} \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$. This is a ring homomorphism that makes $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module.
 \qed
 
+\bigskip
 \begin{theorem}
-
 What is $\textgoth{p} M_\textgoth{p}$ ?
 \end{theorem}
 
@@ -388,6 +410,7 @@ When $M_\textgoth{p}$ is seen as an $A$-module, $\textgoth{p} M_\textgoth{p} = \
 \]
 \qed
 
+\bigskip
 \begin{theorem}
 How
 \[
@@ -416,6 +439,7 @@ The first equality is from Exercise 2.2: $M/\textgoth{a}M \cong
 A/\textgoth{a} \otimes_A M$. 
 In P. Y. Gaillard solution to ItCA Exercise 3.19 (viii).
 
+\bigskip
 \begin{theorem}
 How
 \[
@@ -440,6 +464,7 @@ The second by Proposition 3.5, the third by Exercise 2.2. \\
 In Y. P. Gaillard solution of ItCA Exercise 3.19 (viii).
 \qed
 
+\bigskip
 \begin{theorem}
 How $(B \otimes_A M)_\textgoth{q} = B_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}$ ?
 \end{theorem}
@@ -468,7 +493,7 @@ The first and the last equalities are applications of Proposition 3.5:
 In Y. P. Gaillard solution to ItCA Exercise 3.19 (iii).
 \qed
 
-
+\bigskip
 \begin{theorem}
 The diagram
 \[
@@ -502,6 +527,7 @@ Now that $\kappa_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}/\textgoth{
 
 In solution of ItCA 3.19 (viii) by J. D. Taylor.
 
+\bigskip
 \begin{theorem}
 What is $\textgoth{p} B$?
 \end{theorem}
@@ -511,6 +537,7 @@ For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,
 
 \qed
 
+\bigskip
 \begin{theorem}
 What is $ \textgoth{p} B_\textgoth{p}$?
 \end{theorem}
@@ -520,6 +547,7 @@ $B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so 
 After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s_i \in A \setminus \textgoth{p}$ that is, $b/s$ where $b \in \textgoth{p} B$ and $s_i \in A \setminus \textgoth{p}$.
 \qed
 
+\bigskip
 \begin{theorem}
 How is $A_\textgoth{p}$ an $A$-module ?
 \end{theorem}
@@ -532,7 +560,7 @@ The canonical map $\phi: A \rightarrow A_\textgoth{p}: a \mapsto \frac{a}{1}$ gi
 \]
 \qed
 
-
+\bigskip
 \begin{theorem}
 What is $ \textgoth{p} A_\textgoth{p}$ ?
 \end{theorem}
@@ -554,7 +582,7 @@ with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maxim
 
 \qed
 
-
+\bigskip
 \begin{theorem}
 What is $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p}$ ?
 \end{theorem}
@@ -572,7 +600,6 @@ After bringing to a common denominator, this becomes
  ab/s = f(a)b/s
 \]
 
-
 \noindent
 where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B_\textgoth{p}$, so
 
@@ -581,6 +608,7 @@ where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B
 \]
 \qed
 
+\bigskip
 \begin{theorem}
 How $B_\textgoth{p}/\textgoth{p} B_\textgoth{p} = A_\textgoth{p}/\textgoth{p} A_\textgoth{p} \otimes_{A_\textgoth{p}} B_\textgoth{p}$ ?
 \end{theorem}
@@ -600,16 +628,15 @@ to $M \coloneqq B_\textgoth{p}$, $A \coloneqq A_\textgoth{p}$, $\textgoth{a} \co
 
 \noindent
 now apply $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}$ . 
-
 \qed
 
+\vspace{1.5em}
 \begin{theorem}
 How $A_\textgoth{p} \otimes_A B \cong B_\textgoth{p}$ ?
 \end{theorem}
 
 % \noindent
 Apply Proposition 3.5: $S^{-1}A \otimes_A M \cong S^{-1}M$ . 
-
 \qed
 
 \vspace{1em}
@@ -625,6 +652,7 @@ We now understand the isomorphisms in the solution of ItCA's 3.21(iv) by J D. Ta
 \end{split}
 \end{equation*}
 
+\bigskip
 \begin{theorem}
 $\textgoth{p} \supseteq \textgoth{a} \iff S^{-1}\textgoth{p} \supseteq S^{-1}\textgoth{a}$
 \end{theorem}
@@ -634,6 +662,7 @@ The $\implies$ direction is universal for ideal extensions. For the $\impliedby$
 $(S^{-1}\textgoth{p})^c \supseteq (S^{-1}\textgoth{a})^c$ meaning $\textgoth{p} \supseteq \textgoth{a}^{ec} \supseteq \textgoth{a}$
 \qed
 
+\vspace{1.5em}
 \begin{theorem}
 If $\textgoth{p} \supseteq \textgoth{a}$ then $\textgoth{p} \supseteq \textgoth{a}^{ec} \supseteq \bigcup\limits_{s \in S} (\textgoth{a}:s)$
 \end{theorem}
@@ -641,8 +670,6 @@ If $\textgoth{p} \supseteq \textgoth{a}$ then $\textgoth{p} \supseteq \textgoth{
 \noindent
 If $x \in (\textgoth{a}:s)$ then $xs \in \textgoth{a} \subseteq \textgoth{p}$ then $xs \in \textgoth{p}$ then $x \in \textgoth{p}$ or $s \in \textgoth{p}$ but $\textgoth{p} \cap S = \O$ so $x \in \textgoth{p}$. 
 \qed
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Saturated}
 
@@ -677,7 +704,5 @@ For saturated $S$, if $f(a)$ is a unit in $S^{-1}A$, then $a \in S$.
 \]
 
 As \( S \) is saturated, \( a \in S \).  \qed
-
-
 
 \end{document}S

@@ -137,7 +137,7 @@ Recall what does a homomorphism need to factor through a quotient?
   & A/\textgoth{q} \\
 \end{tikzcd}
 
-\noindend
+\noindent
 The map $\tilde{\phi}$ has to be defined on representatives and cannot differ between them.
 \[
   \tilde{\phi}(a + \textgoth{a}) = \tilde{\phi}(a' + \textgoth{a})
@@ -182,6 +182,18 @@ Does the kernel contain $\textgoth{a}$? If $a \in \textgoth{a}$ then $a \mapsto 
   & a + \textgoth{a} \arrow[ru, mapsto] &
 \end{tikzcd}
 
+How does $\textrm{Spec}(A/\textgoth{a})$ have it canonical image $V(\textgoth{a})$ in $\textrm{Spec}(A)$ ?
+
+\[
+  A \xrightarrow{\pi} A/\textgoth{a}
+\]
+\[
+  a \mapsto a + \textgoth{a}
+\]
+
+\noindent
+That there is a 1-1 correspondence between ideals of $A/\textgoth{a}$ and ideals of $A$ containing $\textgoth{a}$, we are told in the text on page 9. And that prime ideals correspond to prime ideals. So we have a bijection between $\textrm{Spec(A/\textgoth{a})}$ and prime ideals of $A$ containing $\textgoth{a}$, which comprise the set $V(\textgoth{a})$. We are not required to prove a homeomorphism here.
+
 \begin{tikzcd}[column sep=large]
   A \arrow[r, "f"] \arrow[d, "\pi", two heads] 
     & B \arrow[d, "\rho", two heads] \\
@@ -197,4 +209,35 @@ Does the kernel contain $\textgoth{a}$? If $a \in \textgoth{a}$ then $a \mapsto 
     & \textrm{Spec}(B/\textgoth{b}) \arrow[l, "\tilde{f}^*"'] , \arrow[u, leftrightarrow] \arrow[uu, "\rho^*"', bend right=75]
 \end{tikzcd}
 
+\noindent
+The general prime ideal of $B/\textgoth{b}$ is $\rho(\textgoth{q})$ where $\textgoth{q}$ is a prime ideal of $B$ containing $\textgoth{b}$. 
+\[
+  \tilde{f}^*: \rho(\textgoth{q}) \mapsto \tilde{f}^{-1}(\rho(\textgoth{q}))
+\]
+\[
+  \tilde{f}^{-1}(\rho(\textgoth{q})) = \{ a + \textgoth{a}: f(a) + \textgoth{b} \in \rho(\textgoth{q}) \} = \dots
+\]
+
+\vspace*{10px}
+
+\textbf{Property}. $b + \textgoth{b} \in \rho(\textgoth{q}) \iff b\in \textgoth{q}$. \\
+
+Probably general for surjective homomorphism and an ideal, or even a set, containing the kernel. \\
+\noindent
+If $b + \textgoth{b} \in \rho(\textgoth{q})$ then $b + \textgoth{b} = b' + \textgoth{b}$ for some $b' \in \textgoth{q}$, then $b - b' \in \textgoth{q}$ and $b' \in \textgoth{q}$, then $b \in \textgoth{q}$. \\ 
+If $b \in \textgoth{q}$ then $\rho(b) \in \rho(\textgoth{q})$, meaning $b + \textgoth{b} \in \textgoth{q}$. \qed 
+
+\begin{equation*}
+\begin{split}
+  \dots & = \{ a + \textgoth{a}: f(a) \in \textgoth{q} \} \\
+        & = f^{-1}(\textgoth{q}) + \textgoth{a} \\ 
+        & = \pi(f^{-1}(\textgoth{q}))
+\end{split}
+\end{equation*}
+
+\noindent
+Now $\pi^*$ maps this to $\pi^{-1}(\pi(f^{-1}(\textgoth{q})))$. As $\pi$ is surjective, this set is $f^{-1}(\textgoth{q}) = f^*(\textgoth{q})$. \\
+The up-left path: $\rho(\textgoth{q})$ is identified in $\text{Spec}(B)$ with $\textgoth{q}$ then this is mapped by $f^*$ to $f^{-1}(\textgoth{q}) = f^*(\textgoth{q})$. 
+
 \end{document}
+
