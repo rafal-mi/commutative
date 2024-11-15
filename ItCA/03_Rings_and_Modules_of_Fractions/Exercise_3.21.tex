@@ -70,7 +70,7 @@ Recalling that $S^{-1}\textgoth{p} \xmapsto{\phi^*} \textgoth{p}$, the right are
 Now $\phi^*$ maps closed files to closed files in any direction.
 \qed
 
-\vspace*{10px}
+\vspace*{22px}
 
 \textbf{Exercise 3.21.ii}. 
 Let $f: A \rightarrow B$ be a ring homomorphism...
@@ -86,10 +86,8 @@ S^{-1}X \arrow[r, equal]
   & \phi^*(\textrm{Spec}(S^{-1}A)) \arrow[u, hook] 
   & \psi^*(\textrm{Spec}(S^{-1}B)) \arrow[u, hook] 
   & S^{-1}Y \arrow[l, equal] \\
-X \arrow[r, equal]
   & \textrm{Spec}(S^{-1}A) \arrow[u, leftrightarrow] 
-  & \textrm{Spec}(S^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']  
-  & Y \arrow[l, equal] \\
+  & \textrm{Spec}(S^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']
 \end{tikzcd}
 
 \begin{tikzcd}
@@ -110,14 +108,14 @@ That $(S^{-1}f)^* : \textrm{Spec}(S^{-1}B) \rightarrow \textrm{Spec}(S^{-1}A)$ i
 \noindent
 What is $S^{-1}X = \phi^*(\textrm{Spec}(S^{-1}A))$? All prime ideals of $A$ not meeting $S$. \\ 
 What is $f^{*-1}(S^{-1}X) = f^{*-1}(\phi^*(\textrm{Spec}(S^{-1}A)))$? All prime ideals of $B$ whose preimages in $A$ do not meet $S$. \\
-What is $S^{-1}X = \psi^*(\textrm{Spec}(S^{-1}B))$? All prime ideals of $B$ not meeting $f(S)$. \\ 
+What is $S^{-1}Y = \psi^*(\textrm{Spec}(S^{-1}B))$? All prime ideals of $B$ not meeting $f(S)$. \\ 
 We show that the the last two sets are equal.\\
 $\supseteq$: If \textgoth{q} does not meet $f(S)$, may its preimage $f^{-1}(\textgoth{q})$ meet $S$? Let $s \in f^{-1}(\textgoth{q})$; $f(s) \in \textgoth{q}$; now $\textgoth{q}$ meets $f(S)$, a contradiction. So it cannot. \\
 $\subseteq$: Let's not let the preimage $f^{-1}(\textgoth{q})$ of a prime ideal $\textgoth{q}$ of
 $B$ meet $S$. May $\textgoth{q}$ meet $f(B)$? $f(s) \in \textgoth{q}$; $s\in f^{-1}(\textgoth{q}$; now the preimage $f^{-1}(\textgoth{q})$ in $A$ meets $S$, a contradiction. So it cannot. 
 
 
-\vspace*{10px}
+\vspace*{22px}
 
 \textbf{Exercise 3.21.iii}. 
 Let $\textgoth{a}$ be an ideal of $A$ and let $\textgoth{b} = \textgoth{a}^e$ be its extension in $B$...
@@ -239,5 +237,16 @@ If $b \in \textgoth{q}$ then $\rho(b) \in \rho(\textgoth{q})$, meaning $b + \tex
 Now $\pi^*$ maps this to $\pi^{-1}(\pi(f^{-1}(\textgoth{q})))$. As $\pi$ is surjective, this set is $f^{-1}(\textgoth{q}) = f^*(\textgoth{q})$. \\
 The up-left path: $\rho(\textgoth{q})$ is identified in $\text{Spec}(B)$ with $\textgoth{q}$ then this is mapped by $f^*$ to $f^{-1}(\textgoth{q}) = f^*(\textgoth{q})$. 
 
-\end{document}
+\begin{tikzcd}
+\textgoth{p} 
+  & \textgoth{q} \arrow[l, "f^*"', mapsto] \\
+\textgoth{p} \arrow[u, equal] 
+  & \textgoth{q} \arrow[u, equal] \\
+\textgoth{p} + \textgoth{a} \arrow[u, leftrightarrow] 
+  & \textgoth{q} + \textgoth{b} \arrow[u, leftrightarrow] \arrow[l, "\tilde{f}^*"', mapsto] \\
+\end{tikzcd}
 
+\noindent
+We took the risk to write $\pi(\textgoth{p})$ as $\textgoth{p} + \textgoth{a}$ and $\rho(\textgoth{q})$ as $\textgoth{q} + \textgoth{b}$.
+
+\end{document}

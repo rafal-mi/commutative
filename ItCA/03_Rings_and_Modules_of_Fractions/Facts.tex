@@ -93,11 +93,12 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 \end{theorem} 
 
 \noindent
-\textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective correspondence. However, they are not identical as sets, so saying \textit{equals} is too much.
+\textit{Proof.} On the left, the relation is in $ (A/I) \times T $: $ ([a], [s]) \equiv ([a'], [s']) $ iff (ring notation) $([a][s'] - [a'][s]) [s''] = [0]$ iff $[as's'' - a'ss''] = [0]$. On the right, the relation works in $ (A/I) \times S $: $ ([a], s) \equiv ([a'], s') $ iff (module notation) $s'' (s'[a] - s[a']) = [0]$ iff $[as's'' - a'ss''] = [0]$. The conditions are identical so the classes must be in bijective. However, they are not identical as sets, so saying \textit{equals} is too much.
 \qed
 
 \bigskip
 \begin{theorem}
+
 What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
 \end{theorem}
 
@@ -109,9 +110,7 @@ In the Solutions by Y. P. Gaillard, the residue field is $A_\textgoth{p} / \text
 
 \noindent
 Then $\textgoth{a}A_\textgoth{p}$ must be the generalization
-\[
-  \textgoth{a}A_\textgoth{p} = \{a/s: a \in \textgoth{a}, s \notin \textgoth{p}\}
-\]
+n
 
 \qed
 
@@ -178,6 +177,14 @@ S^{-1}\textgoth{p} = \textgoth{p}A_\textgoth{p} = \textgoth{p}_\textgoth{p}
 \end{theorem}
 \qed
 
+\bigskip
+\begin{theorem}
+Same notation for general $S$
+\[
+S^{-1}\textgoth{a} = \textgoth{a}S^{-1}A
+\]
+\end{theorem}
+\qed
 \bigskip
 \begin{theorem}
 \label{b_q_as_a_q}
@@ -311,7 +318,7 @@ The well-definition and injectivity are easily verified and the surjectivity is 
 \begin{theorem}
 The homomorphisms $B \rightarrow S^{-1}B: b \mapsto b/s$ and $B \rightarrow f(S)^{-1}B: b \mapsto b/f(s)$.
 \end{theorem}
-
+8
 \noindent
 The second is natural as $f(S)$ is a multiplicatively closed subset of $B$. The first can arise from the isomorphism of both rings, making the diagram
 \[
@@ -323,9 +330,9 @@ The second is natural as $f(S)$ is a multiplicatively closed subset of $B$. The 
 \]
 \[
 \begin{tikzcd}
-  & b/s \arrow[dd, mapsto] \\
+  & b/1 \arrow[dd, mapsto] \\
   b \arrow[ur] \arrow[dr, mapsto] \\
-  & b/f(s)
+  & b/f(1) = b/1
 \end{tikzcd}
 \]
 commutative, or can be verified directly, and the diagram after it. The top homomorphism 
@@ -337,7 +344,7 @@ What are general ideals of $f(S)^{-1}B$ and $S^{-1}B$?
 \end{theorem}
 
 \noindent
-Every ideal of $f(S)^{-1}B$ is an extended ideal $f(S)^{-1}\textgoth{b}$ = $\{b/f(s): b\in \textgoth{b}, s \in S\}$. The isomorphic set in $S^{-1}B$ is $\{b/s: b\in \textgoth{b}, s \in S\}$.
+Every ideal of $f(S)^{-1}B$ is an extended ideal $f(S)^{-1}\textgoth{b} = \textgoth{b}B_\textgoth{p} = \{b/f(s): b\in \textgoth{b}, s \in S\}$. The isomorphic set in $S^{-1}B$ is $\textgoth{b}S^{-1}B = \{b/s: b\in \textgoth{b}, s \in S\}$.
 \qed
 
 
@@ -533,7 +540,7 @@ What is $\textgoth{p} B$?
 \end{theorem}
 
 % \noindent
-For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,  $\textgoth{p} B = \{ ab = f(a)b : a \in \textgoth{p}, b \in B \}$ is the extension $f(\textgoth{p}) B$ of the ideal $\textgoth{p}$. The second way is that $B$ is an $A$-module, and $\textgoth{p}$ a prime ideal in $A$, so we can form $ \textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i \} $ with $a_i \in \textgoth{p}$, $b_i \in B$, getting the same set.
+For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,  $\textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i : a_i \in \textgoth{p}, b_i \in B \}$ is the extension $f(\textgoth{p}) B$ of the ideal $\textgoth{p}$. The second way is that $B$ is an $A$-module, and $\textgoth{p}$ a prime ideal in $A$, so we can form $ \textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i \} $ with $a_i \in \textgoth{p}$, $b_i \in B$, getting the same set.
 
 \qed
 
@@ -543,8 +550,8 @@ What is $ \textgoth{p} B_\textgoth{p}$?
 \end{theorem}
 
 % \noindent
-$B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s)$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
-After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s_i \in A \setminus \textgoth{p}$ that is, $b/s$ where $b \in \textgoth{p} B$ and $s_i \in A \setminus \textgoth{p}$.
+$B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s_i) = \sum (a_i b_i)/s_i$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
+After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s \in A \setminus \textgoth{p}$. We observe that $b \in \textgoth{p} B$+.
 \qed
 
 \bigskip

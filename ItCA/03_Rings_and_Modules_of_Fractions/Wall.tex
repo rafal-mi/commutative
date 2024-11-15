@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem{theorem}{Isomorphism}
+
+\title{Rings of Fractions Wallpaper}
+
+\begin{document}
+
+\maketitle
+
+\begin{theorem}
+Exercise 2.2
+\end{theorem}
+
+\[
+A/\textgoth{a} \otimes_A M \simeq M/\textgoth{a}M
+\]
+\[
+(a + \textgoth{a}) \otimes x \mapsto ax + \textgoth{a}M
+\]
+
+\vspace{10px}
+\begin{theorem}
+Corollary 3.4.iii. As $S^{-1}A$-modules
+\end{theorem}
+
+\[
+S^{-1}(M/N) \simeq S^{-1}M/S^{-1}M
+\]
+\[
+(m + N) / s \mapsto m/s + S^{-1}N 
+\]
+\noindent
+but only after identification $S^{-1}\iota(S^{-1}N)) == S^{-1}N$ where $\iota$ is the inclusion of $N$ into $M$.
+
+\vspace{10px}
+\begin{theorem}
+Proposition 3.5. As $S^{-1}A$-modules
+\end{theorem}
+
+\[
+S^{-1}A \otimes_A M \simeq S^{-1}M
+\]
+\[
+a/s \otimes m \mapsto am/s
+\]
+\noindent
+and this is the general element (no sum).
+
+\vspace{10px}
+\begin{theorem}
+Proposition 3.5 for $A_\textgoth{p}$. As $A_\textgoth{p}$-modules
+
+\end{theorem}
+
+\[
+A_\textgoth{p} \otimes_A M \simeq M_\textgoth{p}
+\]
+\[
+a/s \otimes m \mapsto am/s
+\]
+\noindent
+and this is the general element (no sum).
+
+\vspace{10px}
+\begin{theorem}
+Proposition 3.7. As $S^{-1}A$-modules
+\end{theorem}
+
+\[
+S^{-1}M \otimes_{S^{-1}A} S^{-1}N \simeq  S^{-1}(M \otimes_A N)
+\]
+\[
+m/s \otimes n/t \mapsto (m \otimes n)/st
+\]
+
+\vspace{10px}
+\begin{theorem}
+Proposition 3.7 for $A_\textgoth{p}$. As $A_\textgoth{p}$-modules
+\end{theorem}
+
+\[
+M_\textgoth{p} \otimes_{A_\textgoth{p}} N_\textgoth{p} \simeq  (M \otimes_A N)_\textgoth{p}
+\]
+\[
+m/s \otimes n/t \mapsto (m \otimes n)/st
+\]
+
+
+
+\end{document}
