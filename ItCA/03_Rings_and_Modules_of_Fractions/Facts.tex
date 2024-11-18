@@ -98,24 +98,6 @@ The quotient ring $A/I$ can be viewed as an $A$-module, and then the ring of fra
 
 \bigskip
 \begin{theorem}
-
-What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
-\end{theorem}
-
-\noindent
-In the Solutions by Y. P. Gaillard, the residue field is $A_\textgoth{p} / \textgoth{p}A_\textgoth{p}$, so the single maximal ideal of $A_\textgoth{p}$ from the Example 1, p. 38 of ItCA must be just $\textgoth{p}A_\textgoth{p}$
-\[
-  \textgoth{p}A_\textgoth{p} = \{a/s: a \in \textgoth{p}, s \notin \textgoth{p}\}
-\]
-
-\noindent
-Then $\textgoth{a}A_\textgoth{p}$ must be the generalization
-n
-
-\qed
-
-\bigskip
-\begin{theorem}
 What is $S^{-1}\textgoth{a}$?
 \end{theorem}
 
@@ -125,14 +107,6 @@ It can be either an $S^{-1}A$-module $S^{-1}\textgoth{a}$, because $\textgoth{a}
   \textgoth{a} \times S / \sim_\textgoth{a} \; \; \ni \; a/s \mapsto a/s \; \in \; A \times S / \sim_A
 \]
 \qed
-
-\bigskip
-\begin{theorem}
-What is $\textgoth{a}_\textgoth{p}$?
-\end{theorem}
-
-\noindent
-It is the $A$-module $\textgoth{a}$ localized at $\textgoth{p}$. It is an $A_\textgoth{p}$-module. We also use this notation for the ideal $S^{-1}\textgoth{a}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$. How are they isomorphic? $a/s \mapsto a/s$ with $a \in \textgoth{a}, s \notin $.  Of what it is an isomorphism? Of $A$-modules, of $A_\textgoth{p}$-modules. They are not rings.
 
 \bigskip
 \begin{theorem}
@@ -146,13 +120,6 @@ It can be either an $A_\textgoth{p}$-module $\textgoth{a}_\textgoth{p}$, because
 \]
 \qed
 
-\begin{theorem}
-What is $\textgoth{p}_\textgoth{p}$?
-\end{theorem}
-
-\noindent
-It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$, that is, the ideal $\textgoth{p}A_\textgoth{p}$.
-
 \bigskip
 \begin{theorem}
 Case $\textgoth{a} = \textgoth{p}$, a prime ideal. What is $S^{-1}\textgoth{p}$?
@@ -163,6 +130,79 @@ It can be either the $A_\textgoth{p}$-module $\textgoth{p}_\textgoth{p}$, becaus
 \[
    \textgoth{p}_\textgoth{p} = \textgoth{p} \: A_\textgoth{p}
 \]
+\qed
+
+\bigskip
+\begin{theorem}
+The contraction of $S^{-1}\textgoth{p}$ is $\textgoth{p}$.
+\end{theorem}
+
+\noindent
+\begin{equation*}
+\begin{split}
+\{a: a/1 \in S^{-1}\textgoth{p}\} & = \{ a: a/1 = a'/s' \; \text{for some} \; a' \in \textgoth{p}, s' \notin \textgoth{p} \} \\
+& = \{a: \exists u \in S \; (as' - a')u = 0 \} \\
+& = \{a: \exists u \in S, s' \in S, a' \in \textgoth{p} \quad as'u = a'u  \}
+\end{split}
+\end{equation*}
+The set finally is $\textgoth{p}$: \\
+$\implies$: $as'u \in \textgoth{p}$, so $a \in \textgoth{p}$ or $s'u \in \textgoth{p}$ but $\textgoth{p} \cap S = \emptyset$; must be $a \in \textgoth{p}$. \\
+$\impliedby$: $a \in \textgoth{p}$; $(a \cdot 1 - a)\cdot 1 = 0$, so $a$ is in the set. \\
+\qed
+
+\bigskip
+\begin{theorem}
+What is $\textgoth{a}_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+It is the $A$-module $\textgoth{a}$ localized at $\textgoth{p}$. It is an $A_\textgoth{p}$-module. We also use this notation for the ideal $S^{-1}\textgoth{a}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$. How are they isomorphic? $a/s \mapsto a/s$ with $a \in \textgoth{a}, s \notin $.  Of what it is an isomorphism? Of $A$-modules, of $A_\textgoth{p}$-modules. They are not rings.
+\qed
+
+\bigskip
+\begin{theorem}
+What is $\textgoth{p}_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+It is the $A$-module $\textgoth{p}$ localized at $\textgoth{p}$. We also use this notation for the ideal $S^{-1}\textgoth{p}$ of $S^{-1}A$, where $S = A \setminus \textgoth{p}$, that is, the ideal $\textgoth{p}A_\textgoth{p}$.
+\qed
+
+\bigskip
+\begin{theorem}
+What is $ \textgoth{p} A_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+As $A_\textgoth{p}$ is an $A$-module, we can multiply it by a prime ideal in $A$ in a standard way
+
+\[
+ \sum a'_i \frac{a_i}{s_i} = \sum \frac{a' a_i}{s_i}
+\]
+
+\noindent
+After bringing to a common denominator, this is
+\[
+ \frac{a}{s}
+\]
+\noindent
+with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
+\qed
+
+\bigskip
+\begin{theorem}
+What are $\textgoth{p}A_\textgoth{p}$ and $\textgoth{a}A_\textgoth{p}$?
+\end{theorem}
+
+\noindent
+In the Solutions by Y. P. Gaillard, the residue field is $A_\textgoth{p} / \textgoth{p}A_\textgoth{p}$, so the single maximal ideal of $A_\textgoth{p}$ from the Example 1, p. 38 of ItCA must be just $\textgoth{p}A_\textgoth{p}$
+\[
+  \textgoth{p}A_\textgoth{p} = \{a/s: a \in \textgoth{p}, s \notin \textgoth{p}\}
+\]
+
+\noindent
+Then $\textgoth{a}A_\textgoth{p}$ must be the generalization
+n
 \qed
 
 \bigskip
@@ -185,6 +225,20 @@ S^{-1}\textgoth{a} = \textgoth{a}S^{-1}A
 \]
 \end{theorem}
 \qed
+
+\bigskip
+\begin{theorem}
+How is $A_\textgoth{p}$ an $A$-module ?
+\end{theorem}
+
+% \noindent
+The canonical map $\phi: A \rightarrow A_\textgoth{p}: a \mapsto \frac{a}{1}$ gives the multiplication by scalars from $A$
+
+\[
+ a' \frac{a}{s} = \phi(a') \frac{a}{s} = \frac{a'}{1} \frac{a}{s} = \frac{a' a}{s}
+\]
+\qed
+
 \bigskip
 \begin{theorem}
 \label{b_q_as_a_q}
@@ -204,6 +258,7 @@ Let $g = \psi \circ f$ be the composition $A \rightarrow B \rightarrow T^{-1}B :
 where the recipe for $h$ is given in \textbf{Proposition 3.1} of ItCA as $a/s \mapsto g(a)g(s)^{-1} = (f(a)/1)(1/f(s)) = f(a)/f(s)$.
 \qed
 
+\bigskip
 \begin{theorem}
 What is $B_\textgoth{p}$ ?
 \end{theorem}
@@ -363,6 +418,7 @@ We show that $(S^{-1}f)^*(S^{-1}\textgoth{q}) = \textgoth{p}$ where $\textgoth{p
     & = \{ a/s: f(a)/s \in \textgoth{b} \}
 \end{split}
 \end{equation*}
+
 We can show that this is $S^{-1}\textgoth{p}$. \\
 
 The $\subseteq$: $f(a)/s = b/s'$ for some $b \in \textgoth{q}, s \in S$; we move to $f(S)^{-1}B$; $f(a)/f(s) = b/f(s')$; $(f(a)f(s') - bf(s))f(u) = 0$ for some $u \in S$; $f(a)f(s')f(u) = bf(s)f(u) \in \textgoth{b}$; $f(a) \in \textgoth{q}$; $a \in f^{-1}(\textgoth{q}) = \textgoth{p}$; $a/s \in S^{-1}\textgoth{p}$. 
@@ -372,24 +428,6 @@ What if we did not move to $f(S)^{-1}B$? $u(s'f(a) - sb) = 0$ in the $S^{-1}A$-m
 The $\supseteq$: $a/s \in S^{-1}\textgoth{p}$; $a \in \textgoth{p}$; $f(a) \in \textgoth{q}$; $f(a)/s \in S^{-1}\textgoth{q}$.
 
 Now we know that $(S^{-1}f)^*oll$ is the restriction of $f^*$ to $\psi^*(\textrm{Spec}(S^{-1}B)) = S^{-1}Y$
-\qed
-
-\bigskip
-\begin{theorem}
-The contraction of $S^{-1}\textgoth{p}$ is $\textgoth{p}$.
-\end{theorem}
-
-\noindent
-\begin{equation*}
-\begin{split}
-\{a: a/1 \in S^{-1}\textgoth{p}\} & = \{ a: a/1 = a'/s' \; \text{for some} \; a' \in \textgoth{p}, s' \notin \textgoth{p} \} \\
-& = \{a: \exists u \in S \; (as' - a')u = 0 \} \\
-& = \{a: \exists u \in S, s' \in S, a' \in \textgoth{p} \quad as'u = a'u  \}
-\end{split}
-\end{equation*}
-The set finally is $\textgoth{p}$: \\
-$\implies$: $as'u \in \textgoth{p}$, so $a \in \textgoth{p}$ or $s'u \in \textgoth{p}$ but $\textgoth{p} \cap S = \emptyset$; must be $a \in \textgoth{p}$. \\
-$\impliedby$: $a \in \textgoth{p}$; $(a \cdot 1 - a)\cdot 1 = 0$, so $a$ is in the set. \\
 \qed
 
 \bigskip
@@ -416,6 +454,54 @@ When $M_\textgoth{p}$ is seen as an $A$-module, $\textgoth{p} M_\textgoth{p} = \
   \textgoth{p} M_\textgoth{p} = (\textgoth{p} A_\textgoth{p}) M_\textgoth{p}
 \]
 \qed
+
+\bigskip
+\begin{theorem}
+What is $\textgoth{p} B$?
+\end{theorem}
+
+% \noindent
+For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,  $\textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i : a_i \in \textgoth{p}, b_i \in B \}$ is the extension $f(\textgoth{p}) B$ of the ideal $\textgoth{p}$. The second way is that $B$ is an $A$-module, and $\textgoth{p}$ a prime ideal in $A$, so we can form $ \textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i \} $ with $a_i \in \textgoth{p}$, $b_i \in B$, getting the same set.
+
+\qed
+
+\bigskip
+\begin{theorem}
+What is $ \textgoth{p} B_\textgoth{p}$?
+\end{theorem}
+
+% \noindent
+$B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s_i) = \sum (a_i b_i)/s_i$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
+After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s \in A \setminus \textgoth{p}$. We observe that $b \in \textgoth{p} B$+.
+\qed
+
+\bigskip
+\begin{theorem}
+What is $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p}$ ?
+\end{theorem}
+
+% \noindent
+As $B_\textgoth{p}$ is an $A_\textgoth{p}$-module, and $\textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$, Any element is, from the definition of the ideal-by-module and from the general element of $\textgoth{p} A_\textgoth{p}$ ($a \in \textgoth{p}$)
+
+\[
+ \sum_i \frac{a_i}{s'_i} \frac{b_i}{s_i} = \sum \frac{ab}{s's}
+\]
+
+\noindent
+After bringing to a common denominator, this becomes
+\[
+ ab/s = f(a)b/s
+\]
+
+\noindent
+where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B_\textgoth{p}$, so
+
+\[
+ (\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}
+\]
+\qed
+
+
 
 \bigskip
 \begin{theorem}
@@ -533,87 +619,6 @@ It cannot.
 Now that $\kappa_\textgoth{q} \otimes_{A_\textgoth{p}} M_\textgoth{p}/\textgoth{p}M_\textgoth{p} = 0$, both tensorands finitely generated, and $\kappa_\textgoth{q} \ne 0$, it must be $M_\textgoth{p}/\textgoth{p}M_\textgoth{p} = 0$ by ItCA Exercise 2.3. 
 
 In solution of ItCA 3.19 (viii) by J. D. Taylor.
-
-\bigskip
-\begin{theorem}
-What is $\textgoth{p} B$?
-\end{theorem}
-
-% \noindent
-For $f: A \rightarrow B$, we can think in two ways. As we identify $ab = f(a)b$,  $\textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i : a_i \in \textgoth{p}, b_i \in B \}$ is the extension $f(\textgoth{p}) B$ of the ideal $\textgoth{p}$. The second way is that $B$ is an $A$-module, and $\textgoth{p}$ a prime ideal in $A$, so we can form $ \textgoth{p} B = \{ \sum a_i b_i = \sum f(a_i)b_i \} $ with $a_i \in \textgoth{p}$, $b_i \in B$, getting the same set.
-
-\qed
-
-\bigskip
-\begin{theorem}
-What is $ \textgoth{p} B_\textgoth{p}$?
-\end{theorem}
-
-% \noindent
-$B_\textgoth{p}$ is an $A$ - module, $\textgoth{p}$ is a prime ideal of $A$, so $ \textgoth{p} B_\textgoth{p}$ makes sense and consists of finite sums $\sum a_i (b_i / s_i) = \sum (a_i b_i)/s_i$ where $a_i \in \textgoth{p}$, $b_i \in B$, and $s_i \in A \setminus \textgoth{p}$.
-After bringing to common denominator, the sum becomes $ab/s$ where $a \in \textgoth{p}$, $b \in B$ and $s \in A \setminus \textgoth{p}$. We observe that $b \in \textgoth{p} B$+.
-\qed
-
-\bigskip
-\begin{theorem}
-How is $A_\textgoth{p}$ an $A$-module ?
-\end{theorem}
-
-% \noindent
-The canonical map $\phi: A \rightarrow A_\textgoth{p}: a \mapsto \frac{a}{1}$ gives the multiplication by scalars from $A$
-
-\[
- a' \frac{a}{s} = \phi(a') \frac{a}{s} = \frac{a'}{1} \frac{a}{s} = \frac{a' a}{s}
-\]
-\qed
-
-\bigskip
-\begin{theorem}
-What is $ \textgoth{p} A_\textgoth{p}$ ?
-\end{theorem}
-
-% \noindent
-As $A_\textgoth{p}$ is an $A$-module, we can multiply it by a prime ideal in $A$ in a standard way
-
-\[
- \sum a'_i \frac{a_i}{s_i} = \sum \frac{a' a_i}{s_i}
-\]
-
-\noindent
-After bringing to a common denominator, this is
-\[
- \frac{a}{s}
-\]
-\noindent
-with $a \in \textgoth{p}$, so $ \textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$ .
-
-\qed
-
-\bigskip
-\begin{theorem}
-What is $(\textgoth{p} A_\textgoth{p}) B_\textgoth{p}$ ?
-\end{theorem}
-
-% \noindent
-As $B_\textgoth{p}$ is an $A_\textgoth{p}$-module, and $\textgoth{p} A_\textgoth{p}$ is the single maximal ideal of the local ring $A_\textgoth{p}$, Any element is, from the definition of the ideal-by-module and from the general element of $\textgoth{p} A_\textgoth{p}$ ($a \in \textgoth{p}$)
-
-\[
- \sum_i \frac{a_i}{s'_i} \frac{b_i}{s_i} = \sum \frac{ab}{s's}
-\]
-
-\noindent
-After bringing to a common denominator, this becomes
-\[
- ab/s = f(a)b/s
-\]
-
-\noindent
-where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B_\textgoth{p}$, so
-
-\[
- (\textgoth{p} A_\textgoth{p}) B_\textgoth{p} = \textgoth{p} B_\textgoth{p}
-\]
-\qed
 
 \bigskip
 \begin{theorem}
