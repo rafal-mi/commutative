@@ -1,0 +1,205 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+% \usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+% \usepackage{floatrow}
+\usepackage{subcaption}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem{theorem}{Step}
+
+\title{Isomorphisms in Claim 1}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Isomorphism 1 to 2}
+
+\[
+  A_\textgoth{p} \otimes_A B/\textgoth{p}B \cong (B/\textgoth{p}B)_\textgoth{p}
+\]
+
+\begin{theorem}
+How is $A_\textgoth{p} \otimes B/\textgoth{p}B$ a $B$-algebra?
+\end{theorem}
+
+
+We need a ring structure and a homomorphism from $B$. The first is defined in [ItCA] TENSOR PRODUCT OF ALGEBRAS pp 30-31.
+\[
+    \left( \frac{a}{s} \otimes (b + \textgoth{p}B) \right) \left( \frac{a'}{s'} \otimes (b' + \textgoth{p}B) \right) = \frac{aa'}{ss'} \otimes (bb' + \textgoth{p}B)
+\]
+but first the $B/\textgoth{p}B$has to be an algebra. That is, to be a ring. We have this in Facts, $\textgoth{p}B = \textgoth{p}^e$, an ideal of $B$ that does not have to be prime, still, $B/\textgoth{p}B$ is a ring.
+
+The $B/\textgoth{p}B$ is a ring and a $B$-module. How is it a $B$-algebra? A homomorphism of rings? One proposition
+\[
+B \longrightarrow B/\textgoth{p}B
+\]
+\[
+b \mapsto b + \textgoth{p}
+\]
+
+In the tensor product of algebras, $A \xrightarrow{f} B$, $A \xrightarrow{g} C$, the mapping from $A$ is $a \mapsto f(a) \otimes g(a)$, here the mapping from $B$ to $A_\textgoth{p} \otimes_A B/\textgoth{p}B$ is
+\[
+ b \mapsto \frac{b}{1} \otimes (b + \textgoth{p}B
+\]
+But are they both, the tensorands, $B$-algebras?
+
+\vspace{10px}
+
+What is $(B/\textgoth{p}B)_\textgoth{p}$? \\
+$\textgoth{p}B$ is an ideal of $B$ . \\
+$B/\textgoth{p}B$ is a ring and an $A$-module. \\
+We can take the $(B/\textgoth{p}B)_\textgoth{p}$ $A\textgoth{p}$-module.
+
+What a ring structure do we have on $(B/\textgoth{p}B)_\textgoth{p}$? General element is $(b + \textgoth{p}B)/s$. The obvious proposition is
+\[
+  \frac{b + \textgoth{p}B}{s} \cdot \frac{b' + \textgoth{p}B}{s'} = \frac{bb' + \textgoth{p}B}{ss'}
+\]
+
+Well-definition. Show that if
+\[
+\frac{b_1 + \textgoth{p}B}{s_1} = \frac{b_2 + \textgoth{p}B}{s_2}, \quad
+\frac{b'_1 + \textgoth{p}B}{s'_!} = \frac{b'_2 + \textgoth{p}B}{s'_2} \tag{1}\label{eq:first}
+\]
+then
+\[
+\frac{b_1 b'_1 + \textgoth{p}B}{s_1 s'_1} = \frac{b_2 b'_2 + \textgoth{p}B}{s_2 s'_2} 
+\tag{2}\label{eq:second}
+\]
+that is,
+\[
+v s_2 s_2' b_1 b_1' - v s_1 s_1' b_2 b_2' \in \textgoth{p}B
+\tag{3}\label{eq:third}
+\]
+The \eqref{eq:first} means
+\[
+u(s_2(b_1 + \textgoth{p}B) - s_1(b_2 + \textgoth{p}B)) = 0, 
+\]
+\[
+u'(s_2'(b_1' + \textgoth{p}B) - s_1'(b_2' + \textgoth{p}B)) = 0
+\]
+That is,
+\[
+u s_2 b_1 - u s_1 b_2 \in \textgoth{p}B,
+\]
+\[
+u' s_2' b_1' - u' s_1' b_2' \in \textgoth{p}B,
+\]
+Then
+\[
+\overline{u s_2 b_1} = \overline{u s_1 b_2}, \quad 
+\overline{u' s_2' b_1'} = \overline{u' s_1' b_2'}
+\]
+\[
+\overline{u s_2 b_1 u' s_2' b_1'} =
+\overline{u s_1 b_2 u' s_1' b_2'}
+\]
+\[
+u u' s_2 s_2' b_1 b_1' - u u' s_1 s_1' b_2 b_2' \in  \textgoth{p}B
+\]
+And it is enough to take $v = u u'$ in \eqref{eq:third}.
+
+Is a localization $B_\textgoth{p}$ of an $A$-algebra $B$ in a prime ideal $\textgoth{p}$ of $A$ a $B$-algebra? It is an $A_\textgoth{p}$-module. As the multiplication we try
+\[
+\frac{b}{s} \cdot \frac{b'}{s'} = \frac{b b'}{s s'}
+\]
+Well-definition.
+\[
+\frac{b_1}{s_1} = \frac{b_2}{s_2}, \quad \frac{b_1'}{s_1'} = \frac{b_2'}{s_2'} 
+\implies
+\frac{b_1 b_1'}{s_1 s_1'} = \frac{b_2 b_2'}{s_2 s_2'} \ ?
+\]
+The left
+\[
+u(s_2 b_1 - s_1 b_2) = 0, \quad u'(s_2' b_1' - s_1' b_2') = 0
+\]
+\[
+u s_2 b_1 = u s_1 b_2, \quad u' s_2' b_1' = u' s_1' b_2'
+\]
+The right
+\[
+v(s_2 s_2' b_1 b_1' - s_1 s_1' b_2 b_2') = 0
+\]
+\[
+v s_2 s_2' b_1 b_1' = v s_1 s_1' b_2 b_2'
+\]
+Take $v = u u'$. \\
+Distributivity over addition.
+\[
+\frac{b}{s} \left( \frac{b'}{s'} + \frac{b''}{s''} \right) = 
+\frac{b}{s} \frac{s'' b' + s' b''}{s' s''} = \frac{s'' b b' + s' b b''}{s s' s''}
+\]
+\[
+\frac{b}{s}\frac{b'}{s'} + \frac{b}{s}\frac{b''}{s''} = 
+\frac{b b'}{s s'} + \frac{b b''}{s s''} = \frac{s s'' b b' + s s' b b''}{s^2 s' s''} =
+\frac{s(s'' b b' + s' b b'')}{s^2 s' s''} = 
+\frac{s'' b b'' + s' b b''}{s s' s''}
+\]
+
+We now use this fact to get the multiplication in the $A$-algebra $B/\textgoth{p}B$ localized at an ideal $\textgoth{p}$ of $A$, that is, $(B/\textgoth{p}B)_\textgoth{p}$.
+\[
+\frac{b + \textgoth{p}B}{s} \cdot \frac{b' + \textgoth{p}B}{s'} = 
+\frac{(b + \textgoth{p}B)(b' + \textgoth{p}B)}{s s'} = 
+\frac{b b' + \textgoth{p}B}{s s'}
+\]
+which is an easier way to define this multiplication, avoiding lots of calculations.
+
+We now move to to a proposition of mutually reverse maps between 
+\[
+A_\textgoth{p} \otimes_A B/\textgoth{p}B \quad  \text{and} \quad
+(B/\textgoth{p}B)_\textgoth{p}
+\]
+Both are $B$-algebras. And $B$-algebras' isomorphisms must be commutative with homomorphisms from $B$.
+
+\begin{figure}[htb]
+\centering
+\begin{subfigure}[T]{0.4\textwidth}
+\centering
+\begin{tikzcd}
+& A_\textgoth{p} \otimes_A B/\textgoth{p}B \arrow[dd]  \\
+B \arrow[ur] \arrow[dr] \\
+& (B/\textgoth{p}B)_\textgoth{p}
+\end{tikzcd}
+\end{subfigure}
+\centering
+\begin{subfigure}[T]{0.4\textwidth}
+\centering
+\begin{tikzcd}
+& A_\textgoth{p} \otimes_A B/\textgoth{p}B \arrow[dd]  \\
+B \arrow[ur] \arrow[dr] \\
+& (B/\textgoth{p}B)_\textgoth{p}
+\end{tikzcd}
+\end{subfigure}
+\end{figure}
+
+\end{document}
+
