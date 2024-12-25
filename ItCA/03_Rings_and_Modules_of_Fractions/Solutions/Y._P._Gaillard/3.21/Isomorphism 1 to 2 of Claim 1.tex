@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{graphicx}
-% \usepackage{tikz-cd}
+\usepackage{tikz-cd}
 \usepackage{tikz}
 \usetikzlibrary{cd}
 \usepackage{amsmath}
@@ -36,14 +36,13 @@
 
 \newtheorem{theorem}{Step}
 
-\title{Isomorphisms in Claim 1}
+\title{Isomorphisms 1 to 2 in Claim 1}
 
 \begin{document}
 
 \maketitle
 
-\textbf{Isomorphism 1 to 2}
-
+\textbf{Fact}. The isomorphism 1 to 2.
 \[
   A_\textgoth{p} \otimes_A B/\textgoth{p}B \cong (B/\textgoth{p}B)_\textgoth{p}
 \]
@@ -194,12 +193,147 @@ B \arrow[ur] \arrow[dr] \\
 \begin{subfigure}[T]{0.4\textwidth}
 \centering
 \begin{tikzcd}
-& A_\textgoth{p} \otimes_A B/\textgoth{p}B \arrow[dd]  \\
-B \arrow[ur] \arrow[dr] \\
+& 1/1 \otimes (b + \textgoth{p}B) \arrow[dd, mapsto]  \\
+b \arrow[ur, mapsto] \arrow[dr] \\
+& (b + \textgoth{p}B)/1
+\end{tikzcd}
+\end{subfigure}
+\end{figure}
+\noindent
+For the top-down, the proposition is
+\[
+a/s \otimes (b + \textgoth{p}B) \mapsto (ab + \textgoth{p}B)/s
+\tag{4}\label{eq:fourth}
+\]
+For the bottom-up, the proposition is
+\[
+(b + \textgoth{p}B)/s \mapsto  1/s \otimes (b + \textgoth{p}B)
+\tag{5}\label{eq:fifth}
+\]
+
+We start with $A$-bilinear map $A_\textgoth{p} \times B/\textgoth{p}B \rightarrow (B/\textgoth{p}B)_\textgoth{p}$
+\[
+(a/s, b + \textgoth{p}B) \mapsto (ab + \textgoth{p}B)/s
+\tag{6}\label{eq:sixth}
+\]
+First we verify well-defibition then bilinearity.
+\[
+\frac{a}{s} = \frac{a'}{s'}, \ b + \textgoth{p}B = b' + \textgoth{p}B 
+\ \xRightarrow{?} \ 
+\frac{ab + \textgoth{p}B}{s} = \frac{a' b' + \textgoth{p}B}{s'}
+\]
+\[
+u(s'a - sa') = 0, \ b - b' \in \textgoth{p}B
+\ \xRightarrow{?} \ 
+v(s'(ab + \textgoth{p}B) - s(a'b' + \textgoth{p}B)) = 0
+\]
+\[
+us'a = usa', \ b = b' + b'', b'' \in \textgoth{p}B
+\ \xRightarrow{?} \ 
+vs'ab - vsa'b' \in \textgoth{p}B
+\]
+By the multiplication property of equality
+\[
+us'ab = usa'b' + usa'b'',
+\]
+the second summand being in the ideal $\textgoth{p}B$,
+\[
+us'ab - usa'b' \in \textgoth{p}B
+\]
+Taking $v = u$ we see our map well-defined. We now verify the bilinearity. Additivity in the first.
+\begin{align*}
+\left( \frac{a}{s} + \frac{a'}{s'}, b + \textgoth{p}B \right) 
+& = \left( \frac{s'a + sa'}{ss'}, b + \textgoth{p}B \right) \\
+& \mapsto \frac{(s'a + sa')b + \textgoth{p}B}{ss'} \\
+& = \frac{s'ab + sa'b + \textgoth{p}B}{ss'} \\
+& = \frac{s'ab + \textgoth{p}B}{ss'} + \frac{sa'b + \textgoth{p}B}{ss'} \\
+& = \frac{s'(ab + \textgoth{p}B)}{ss'} + \frac{s(a'b + \textgoth{p}B)}{ss'} \\
+& = \frac{ab + \textgoth{p}B}{s} + \frac{a'b + \textgoth{p}B}{s'} \\
+& = \ \mapsfrom \left( \frac{a}{s}, b + \textgoth{p}B \right) + \mapsfrom \left( \frac{a'}{s'}, b + \textgoth{p}B \right)
+\end{align*}
+Scaling in the first.
+\begin{align*}
+\left( a' \cdot \frac{a}{s}, b + \textgoth{p}B \right) 
+& = \left( \frac{aa'}{s}, b + \textgoth{p}B \right) \\
+& \mapsto \frac{a'ab + \textgoth{p}B}{s} \\
+& = a' \cdot \frac{ab + \textgoth{p}B}{s} \\
+& = a' \cdot \mapsfrom \left( \frac{a}{s}, b + \textgoth{p}B \right)
+\end{align*}
+Additivity in the second.
+\begin{align*}
+\left( \frac{a}{s}, b + \textgoth{p}B + b' + \textgoth{p}B \right)
+& = \left( \frac{a}{s}, b + b' + \textgoth{p}B \right) \\
+& \mapsto \frac{a(b + b') + \textgoth{p}B}{s} \\
+& = \frac{ab + ab' + \textgoth{p}B}{s} \\
+& = \frac{ab + \textgoth{p}B + ab' + \textgoth{p}B}{s} \\
+& = \frac{ab  + \textgoth{p}B}{s} + \frac{ab' + \textgoth{p}B}{s} \\
+& = \ \mapsfrom \left( \frac{a}{s}, b + \textgoth{p}B \right) + \mapsfrom \left( \frac{a}{s}, b' + \textgoth{p}B \right)
+\end{align*}
+Scaling in the second.
+\begin{align*}
+\left( \frac{a}{s}, a'(b + \textgoth{p}B) \right)
+& = \left( \frac{a}{s}, a'b + \textgoth{p}B \right) \\
+& \mapsto \frac{aa'b + \textgoth{p}B}{s} \\
+& = a' \cdot \frac{ab + \textgoth{p}B}{s} \\
+& = a' \cdot \mapsfrom \left( \frac{a}{s}, b + \textgoth{p}B \right)
+\end{align*}
+The map \eqref{eq:sixth} is now proved bilinear. By the universal property it factors. 
+\begin{figure}[htb]
+\centering
+\begin{subfigure}[T]{0.4\textwidth}
+\centering
+\begin{tikzcd}
+A_\textgoth{p} \times B/\textgoth{p}B \arrow[r] \arrow[rd] & A_\textgoth{p} \otimes_A B/\textgoth{p}B \arrow[d] \\
 & (B/\textgoth{p}B)_\textgoth{p}
+\end{tikzcd}
+\end{subfigure}
+\centering
+\begin{subfigure}[T]{0.4\textwidth}
+\centering
+\begin{tikzcd}
+(a/s, b + \textgoth{p}B) \arrow[r, mapsto] \arrow[rd, mapsto] & a/s \otimes b + \textgoth{p}B \arrow[d, mapsto] \\
+& (ab + \textgoth{p}B)/s
 \end{tikzcd}
 \end{subfigure}
 \end{figure}
 
+\noindent
+The top-down arrow is our map \eqref{eq:fourth}. We move to the well-definition of the map \eqref{eq:fifth}.
+\[
+\frac{b + \textgoth{p}B}{s} = \frac{b' + \textgoth{p}B}{s'} 
+\xRightarrow{?}
+1/s \otimes (b + \textgoth{p}B) = 1/s' \otimes (b' + \textgoth{p}B)
+\]
+The left.
+\[
+u(s'(b + \textgoth{p}B) - s(b' + \textgoth{p}B)) = 0
+\]
+\[
+us'b - usb' \in \textgoth{p}B
+\]
+The right.
+\begin{align*}
+\frac{1}{s'} \otimes (b' + \textgoth{p}B) 
+& = \frac{us}{uss'} \otimes (b' + \textgoth{p}B) \\
+& = \frac{1}{uss'} \otimes (usb' + \textgoth{p}B) \\
+& = \frac{1}{uss'} \otimes (us'b + \textgoth{p}B) \\
+& = \frac{us'}{uss'} \otimes (b + \textgoth{p}B) \\
+& = \frac{1}{s} \otimes (b + \textgoth{p}B)
+\end{align*}
+The map \eqref{eq:fifth} is now well-defined. Additivity.
+\begin{align*}
+b + \textgoth{p}B + b' + \textgoth{p}B & = b + b' + \textgoth{p}B \\
+& \mapsto 1/1 \otimes (b + b' + \textgoth{p}B) \\
+& = 1/1 \otimes (b + \textgoth{p}B + b' + \textgoth{p}B) \\
+& = 1/1 \otimes (b + \textgoth{p}B) + 1/1 \otimes (b' + \textgoth{p}B) \\
+& = \ \mapsfrom (b + \textgoth{p}B) + \mapsfrom (b' + \textgoth{p}B)
+\end{align*}
+Multiplicativity.
+\begin{align*}
+(b + \textgoth{p}B)(b' + \textgoth{p}B) & = bb' + \textgoth{p}B \\
+& \mapsto 1/1 \otimes (bb' + \textgoth{p}B) \\
+& = (1/1)(1/1) \otimes (b + \textgoth{p}B)(b' + \textgoth{p}B) \\
+& = (1/1 \otimes (b + \textgoth{p}B))(1/1 \otimes (b' + \textgoth{p}B)) \\
+& = \ \mapsfrom (b + \textgoth{p}B) \mapsfrom (b' + \textgoth{p}B) 
+\end{align*}
 \end{document}
-
