@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{yfonts}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+% \usepackage{floatrow}
+\usepackage{subcaption}
+
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=35mm,
+ right=35mm,
+ top=20mm,
+ }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+%\newcommand{\goth}[1]{\text{\textgoth{#1}}
+
+\newtheorem{theorem}{Step}
+
+\title{Isomorphisms 2 to 3 of Claim 1}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Fact}. The isomorphisme 2 to 3.
+\[
+  (B/\textgoth{p}B)_\textgoth{p} \cong B_\textgoth{p}B / \textgoth{p}_\textgoth{p} B_\textgoth{p}
+\]
+We know $\textgoth{p}_\textgoth{p} = \textgoth{p}A_\textgoth{p}$ is the single maximal ideal of $A_\textgoth{p}$. The map
+\[
+(B/\textgoth{p}B)_\textgoth{p} \rightarrow B_\textgoth{p}/\textgoth{p}_\textgoth{p}B_\textgoth{p}
+\]
+\[
+\frac{b + \textgoth{p}B}{s} \mapsto \frac{b}{s} + \textgoth{p}_\textgoth{p}B_\textgoth{p}
+\tag{1}\label{eq:first}
+\]
+Well-definition.
+\[
+\frac{b + \textgoth{p}B}{s} = \frac{b' + \textgoth{p}B}{s'}
+\xRightarrow{?}
+\frac{b}{s} - \frac{b'}{s'} \in \textgoth{p}B
+\]
+The left side of the implication.
+\[
+u(s'(b + \textgoth{p}B) - s(b' + \textgoth{p}B)) = 0 + \textgoth{p}B
+\]
+\[
+us'b - usb' \in \textgoth{p}B
+\]
+\[
+us'b - usb' = \sum a_i b_i
+\tag{2}\label{eq:second}
+\]
+The right side of the implication.
+\[
+\frac{s'b - sb'}{ss'} \in \textgoth{p}_\textgoth{p}B_\textgoth{p} = \textgoth{p}A_\textgoth{p}B
+\]
+\begin{align*}
+\frac{s'b - sb'}{ss'} & = \sum \frac{a_i}{s_i}\frac{b_i}{t_i} \\
+& = \sum \frac{a_ib_i}{s_it_i} \\
+& = \sum \frac{a_ib_i}{s_i'} \\
+& = \frac{1}{s''} \sum a_i''b_i
+\tag{3}\label{eq:third}
+\end{align*}
+\[
+v(s''(s'b - sb') - ss' \sum a_i'' b_i) = 0
+\]
+\[
+vs''s'b - vs''sb' = \sum vss'a_i''b_i
+\]
+Multiplying the equation \eqref{eq:second} by $s's$,
+\[
+us'^2sb - us's^2b' = \sum s'sa_ib_i
+\]
+Take $v = 1$, $s'' = u s's$, $a_i'' = a_i$ in \eqref{eq:third}. Our map \eqref{eq:first} is well-defined.
+
+\vspace{4mm}
+Proposition of inverse.
+\[
+B_\textgoth{p}/\textgoth{p}_\textgoth{p}B_\textgoth{p} \rightarrow (B/\textgoth{p}B)_\textgoth{p}
+\]
+\[
+\frac{b}{s} \mapsto \frac{b}{s} + \textgoth{p}_\textgoth{p}B_\textgoth{p} 
+\]
+Well-definition.
+\[
+\frac{b}{s} - \frac{b'}{s'} \in \textgoth{p}A_\textgoth{p}B_\textgoth{p}
+\xRightarrow{?}
+\frac{b + \textgoth{p}B}{s} = \frac{b' + \textgoth{p}B}{s'}
+\]
+The left side of the implication.
+\[
+\frac{s'b - sb'}{ss'} = \frac{1}{s''}\sum a_i b_i
+\]
+\[
+u(s''(s'b - sb') - ss' \sum a_ib_i) = 0
+\]
+\[
+us''s'b - us''sb' = \sum us'sa_ib_i
+\]
+The right side of the implication.
+\[
+v(s'(b + \textgoth{p}B) - s(b' + \textgoth{p}B) = 0 + \textgoth{p}B
+\]
+\[
+vs'b - vsb' \in \textgoth{p}B
+\]
+\[
+vs'b - vsb' = \sum a_i'b_i'
+\]
+Take $v = us''$, $a_i' = a_i$, $b_i' = us'sb_i$. The inverse map is well-defined. The maps in both directions are obvious mutual inversions.
+
+\end{document}

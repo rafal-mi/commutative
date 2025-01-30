@@ -214,6 +214,10 @@ S^{-1}\textgoth{a} = \textgoth{a}A_\textgoth{p} = \textgoth{a}_\textgoth{p}
 \[
 S^{-1}\textgoth{p} = \textgoth{p}A_\textgoth{p} = \textgoth{p}_\textgoth{p} 
 \]
+\[
+S^{-1}\textgoth{p'} = \textgoth{p'}A_\textgoth{p} 
+\]
+for prime ideal $\textgoth{p'} \subseteq \textgoth{p}$ .
 \end{theorem}
 \qed
 
@@ -346,6 +350,32 @@ By argument identical to that for the $B_\textgoth{p}$ ring.
 
 \bigskip
 \begin{theorem}
+A ring homomorphism $S^{-1}A \rightarrow S^{-1}B$.
+\end{theorem}
+
+\noindent
+It is 
+\[
+\frac{a}{s} \mapsto \frac{f(a)}{s}
+\]
+Preservation of the multiplication is immediately verified.
+\qed
+
+\bigskip
+\begin{theorem}
+A ring homomorphis $A_\textgoth{p} \rightarrow B_\textgoth{p}$.
+\end{theorem}
+
+\noindent
+It is 
+\[
+\frac{a}{s} \mapsto \frac{f(a)}{s}
+\]
+Preservation of the multiplication is immediately verified.
+\qed
+
+\bigskip
+\begin{theorem}
 The ring $f(S)^{-1}B$.
 \end{theorem}
 
@@ -398,6 +428,31 @@ What are general ideals of $f(S)^{-1}B$ and $S^{-1}B$?
 Every ideal of $f(S)^{-1}B$ is an extended ideal $f(S)^{-1}\textgoth{b} = \textgoth{b}B_\textgoth{p} = \{b/f(s): b\in \textgoth{b}, s \in S\}$. The isomorphic set in $S^{-1}B$ is $\textgoth{b}S^{-1}B = \{b/s: b\in \textgoth{b}, s \in S\}$.
 \qed
 
+\bigskip
+\begin{theorem}
+What are general prime ideals of $f(S)^{-1}B$ and $S^{-1}B$?
+\end{theorem}
+
+\noindent
+Prime ideals of $f(S)^{-1}B$ are in 1-1 correspondence with prime ideals of $B$ not meeting $f(S)$.
+\[
+  \textgoth{q} \longleftrightarrow f(S)^{-1}\textgoth{q} = \textgoth{q}f(S)^{-1}B
+\]
+Contraction of the right on the left, extension of the left on the right.
+\qed
+
+\bigskip
+\begin{theorem}
+What are general prime ideals of $B_\textgoth{p}$ ?
+\end{theorem}
+
+\noindent
+$B_\textgoth{p} = S^{-1}B \cong f(S)^{-1}B$ for $S = A \setminus \textgoth{p}$ . Prime ideals of $f(A \setminus \textgoth{p})^{-1}B$ are in 1-1 correspondence with prime ideals of $B$ not meeting $f(A \setminus \textgoth{p})$. We have no better option than using $f(A \setminus \textgoth{p})$ here.
+\[
+  \textgoth{q} \longleftrightarrow f(A \setminus \textgoth{p})^{-1}\textgoth{q} = \textgoth{q}B_\textgoth{p}
+\]
+Contraction of the right on the left, extension of the left on the right.
+\qed
 
 \bigskip
 \begin{theorem}
@@ -497,7 +552,20 @@ where $a \in \textgoth{p}$. Notice we got the general element of $\textgoth{p} B
 \]
 \qed
 
+\bigskip
+\begin{theorem}
+The extension in $B_\textgoth{p}$ of the maximal ideal $\textgoth{p}A_\textgoth{p}$ of $A_\textgoth{p}$ is $\textgoth{p}B_\textgoth{p}$
+\end{theorem}
 
+\noindent
+\begin{align*}
+  B_\textgoth{p}(S^{-1}f)(\textgoth{p}A_\textgoth{p}) & = B_\textgoth{p}(S^{-1}f) \bigg \{\frac{a}{s}: a \in \textgoth{p}, s \notin \textgoth{p} \bigg \} \\
+  & = B_\textgoth{p} \bigg\{ \frac{f(a)}{s}: a \in \textgoth{p}, s \notin \textgoth{p} \bigg\} \\
+  & = \bigg\{ \frac{bf(a)}{s}: a \in \textgoth{p}, b \in B, s \notin \textgoth{p} \bigg\} \\
+  & = \bigg\{ \frac{ab}{s}: a \in \textgoth{p}, b \in B, s \notin \textgoth{p} \bigg\} 
+\end{align*}
+We know from Facts that this is $\textgoth{p}B_\textgoth{p}$.
+\qed
 
 \bigskip
 \begin{theorem}

@@ -84,10 +84,10 @@ X \arrow[r, equal]
   & Y \\
 S^{-1}X \arrow[r, equal]
   & \phi^*(\textrm{Spec}(S^{-1}A)) \arrow[u, hook] 
-  & \psi^*(\textrm{Spec}(S^{-1}B)) \arrow[u, hook] 
+  & \psi^*(\textrm{Spec}(f(S)^{-1}B)) \arrow[u, hook] 
   & S^{-1}Y \arrow[l, equal] \\
   & \textrm{Spec}(S^{-1}A) \arrow[u, leftrightarrow] 
-  & \textrm{Spec}(S^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']
+  & \textrm{Spec}(f(S)^{-1}B) \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"']
 \end{tikzcd}
 
 \begin{tikzcd}
@@ -96,7 +96,7 @@ S^{-1}X \arrow[r, equal]
 \textgoth{p} \arrow[u, equal] 
   & \textgoth{q} \arrow[u, equal] \\
 S^{-1}\textgoth{p} \arrow[u, leftrightarrow] 
-  & S^{-1}\textgoth{q} \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"', mapsto] \\
+  & f(S)^{-1}\textgoth{q} \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"', mapsto] \\
 \end{tikzcd}
 
 \noindent
@@ -201,8 +201,8 @@ That there is a 1-1 correspondence between ideals of $A/\textgoth{a}$ and ideals
 \begin{tikzcd}[column sep=large]
   \textrm{Spec}(A) 
     & \textrm{Spec}(B) \arrow[l, "f^*"'] \\
-  \pi^*(\textrm{Spec}(A/\textgoth{a}) \arrow[u, hook] 
-    & \rho^*(\textrm{Spec}(B/\textgoth{b}) \arrow[l] \arrow[u, hook] \\
+  \pi^*(\textrm{Spec}(A/\textgoth{a})) \arrow[u, hook] 
+    & \rho^*(\textrm{Spec}(B/\textgoth{b})) \arrow[l] \arrow[u, hook] \\
   \textrm{Spec}(A/\textgoth{a}) \arrow[u, leftrightarrow] \arrow[uu, "\pi^*", bend left=75]
     & \textrm{Spec}(B/\textgoth{b}) \arrow[l, "\tilde{f}^*"'] , \arrow[u, leftrightarrow] \arrow[uu, "\rho^*"', bend right=75]
 \end{tikzcd}
@@ -240,7 +240,7 @@ The up-left path: $\rho(\textgoth{q})$ is identified in $\text{Spec}(B)$ with $\
 \begin{tikzcd}
 \textgoth{p} 
   & \textgoth{q} \arrow[l, "f^*"', mapsto] \\
-\textgoth{p} \arrow[u, equal] 
+\textgoth{p} \arrow[u, equal] 0
   & \textgoth{q} \arrow[u, equal] \\
 \textgoth{p} + \textgoth{a} \arrow[u, leftrightarrow] 
   & \textgoth{q} + \textgoth{b} \arrow[u, leftrightarrow] \arrow[l, "\tilde{f}^*"', mapsto] \\
@@ -249,4 +249,101 @@ The up-left path: $\rho(\textgoth{q})$ is identified in $\text{Spec}(B)$ with $\
 \noindent
 We took the risk to write $\pi(\textgoth{p})$ as $\textgoth{p} + \textgoth{a}$ and $\rho(\textgoth{q})$ as $\textgoth{q} + \textgoth{b}$.
 
+\vspace*{22px}
+
+\textbf{Exercise 3.21.iv}. 
+Let $\textgoth{p}$ be a prime ideal of $A$...
+
+\noindent
+We take $S = A \setminus \textgoth{p}$ in (ii)
+
+\begin{tikzcd}[column sep=large]
+  \textrm{Spec}(A) 
+    & \textrm{Spec}(B) \arrow[l, "f^*"'] \\
+  \phi^*(\textrm{Spec}(A_\textgoth{p}) \arrow[u, hook] 
+    & \psi^*(\textrm{Spec}(B_\textgoth{p})) \arrow[l] \arrow[u, hook] \\
+  \textrm{Spec}(A_\textgoth{p}) \arrow[u, leftrightarrow] \arrow[uu, "\phi^*", bend left=75]
+    & \textrm{Spec}(B_\textgoth{p
+    }) \arrow[l, "f_\textgoth{p}^*"'] \arrow[u, leftrightarrow] \arrow[uu, "\psi^*"', bend right=75]
+\end{tikzcd}
+\begin{tikzcd}
+\textgoth{p} 
+  & \textgoth{q} \arrow[l, "f^*"', mapsto] \\
+\textgoth{p} \arrow[u, equal] 
+  & \textgoth{q} \arrow[u, equal] \\
+S^{-1}\textgoth{p} \arrow[u, leftrightarrow] 
+  & S^{-1}\textgoth{q} \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"', mapsto] \\
+\end{tikzcd}
+
+What a ring can be reduced modulo $S^{-1}\textgoth{p} = (A \setminus \textgoth{p}) \textgoth{p} = \textgoth{p}A_\textgoth{p}$? Only a ring of which $S^{-1}\textgoth{p}$ is an ideal, that is, the ring $A_\textgoth{p}$.
+In (iii), the ring $B$ to the right is reduced by the extension of the ideal $\textgoth{a}$ of $A$. What is the extension of the ideal $\textgoth{p}A_\textgoth{p}$ in $B$? We know from Fact that this is $\textgoth{p}B_\textgoth{p}$.
+
+This is how we apply (iii): $A := A_\textgoth{p}$, $\textgoth{a} := \textgoth{p}A_\textgoth{p}$, $\textgoth{b} := \textgoth{p}B_\textgoth{p}$, $f := f_\textgoth{p} := S^{-1}f: A_\textgoth{p} \rightarrow B_\textgoth{p}$.
+
+\begin{tikzcd}[column sep=large]
+  \textrm{Spec}(A) 
+    & \textrm{Spec}(B) \arrow[l, "f^*"'] \\
+  \phi^*(\textrm{Spec}(A_\textgoth{p})) \arrow[u, hook] 
+    & \psi^*(\textrm{Spec}(B_\textgoth{p})) \arrow[l] \arrow[u, hook] \\
+  \textrm{Spec}(A_\textgoth{p}) \arrow[u, leftrightarrow] \arrow[uu, "\phi^*", bend left=75]
+    & \textrm{Spec}(B_\textgoth{p
+    }) \arrow[l, "f_\textgoth{p}^*"'] \arrow[u, leftrightarrow] \arrow[uu, "\psi^*"', bend right=75] \\
+  \pi^*(\textrm{Spec}\left(\dfrac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}}\right)) \arrow[u, hook] 
+    & \rho^*(\textrm{Spec}\left(\dfrac{B_\textgoth{p
+    }}{\textgoth{p}B_\textgoth{p}}\right)) \arrow[l] \arrow[u, hook] \\
+  \textrm{Spec}\left(\dfrac{A_\textgoth{p}}{\textgoth{p} A_\textgoth{p}}\right) \arrow[u, leftrightarrow] \arrow[uu, "\pi^*", bend left=75]
+    & \textrm{Spec}\left(\dfrac{B_\textgoth{p
+    }}{\textgoth{p}B_\textgoth{p}}\right) \arrow[l, "\tilde{f}_\textgoth{p}^*"'] \arrow[u, leftrightarrow] \arrow[uu, "\rho^*"', bend right=75]
+\end{tikzcd}
+
+\begin{tikzcd}[column sep=large]
+\textgoth{p} 
+  & \textgoth{q} \arrow[l, "f^*"', mapsto] \\
+\textgoth{p} \arrow[u, equal] 
+  & \textgoth{q} \arrow[u, equal] \\
+S^{-1}\textgoth{p} \arrow[u, leftrightarrow] \arrow[d, equal]
+  & f(S)^{-1}\textgoth{q} \arrow[u, leftrightarrow] \arrow[l, "S^{-1}f^*"', mapsto] \arrow[d, equal] \\
+f^{-1}(\textgoth{q})A_\textgoth{p} 
+  & \textgoth{q}B_\textgoth{p} \arrow[l, "f_\textgoth{p}^*"', mapsto] \\
+f^{-1}(\textgoth{q})A_\textgoth{p} \arrow[u, equal] 
+  & \textgoth{q}B_\textgoth{p} \arrow[l, mapsto] \arrow[u, equal] \\
+f^{-1}(\textgoth{q})A_\textgoth{p} + \textgoth{p}A_\textgoth{p} \arrow[u, leftrightarrow] 
+  & \textgoth{q}B_\textgoth{p} + \textgoth{p}B_\textgoth{p} \arrow[l, "\tilde{f}_\textgoth{p}^*"', mapsto] \arrow[u, leftrightarrow] 
+\end{tikzcd}
+
+\vspace{2mm}
+
+What is $f^{*-1}(\textgoth{p})$? It is the set $\{ \textgoth{q}: f^*(\textgoth{q}) = \textgoth{p}\} = \{ \textgoth{q}: \textgoth{p} = f^{-1}(\textgoth{q})\}$. We know that $f^{*-1}(S^{-1}X) = S^{-1}Y$ and $\textgoth{p} \in S^{-1}X$ so $f^{*-1}(\textgoth{p}) \subseteq S^{-1}Y$. Any ideal $\textgoth{q} \in f^{*-1}(\textgoth{p})$ does not meet $f(A \setminus \textgoth{p})$: $a \in A \setminus \textgoth{p}$; $f(a) \in \textgoth{q}$; $a \in f^{-1}(\textgoth{q})$; $a \in \textgoth{p}$, a contradiction. So it is in $\psi^*(\textrm{Spec}(B_\textgoth{p}))$. To fall into $\rho^*(\textrm{Spec}(B_\textgoth{p}/\textgoth{p}B_\textgoth{p}))$, $\textgoth{q}B_\textgoth{p}$ should contain $\textgoth{p}B_\textgoth{p}$.
+\[
+\textgoth{p}B_\textgoth{p} = \Big\{\frac{f(a)}{s}: a \in \textgoth{p}, b \in B, s \notin \textgoth{p} \Big\}
+\]
+\[
+\textgoth{q}B_\textgoth{p} = \Big\{\frac{b}{s}: b \in \textgoth{q}, s \notin \textgoth{p} \Big\}
+\]
+But $f(a) \in \textgoth{q}$, then $f(a)b \in \textgoth{q}$. So $\textgoth{q}B_\textgoth{p} \supseteq \textgoth{p}B_\textgoth{p}$. We have shown that
+\[
+f^{*-1}(\textgoth{p}) \subseteq \psi^*(\rho^*(B_\textgoth{p}/\textgoth{p}B_\textgoth{p}))
+\]
+The reverse inclusion is obvious from both diagrams combined (the large diagram). Also the diagram shows  a bijection.
+
+A closed set in $\textrm{Spec}(B_\textgoth{p}/\textgoth{p}B_\textgoth{p})$ is $V(\rho(\textgoth{b}B_\textgoth{p})) = \rho(V(\textgoth{b}B_\textgoth{p}))$. We want to show that the $\psi^* \circ \rho^*$ image of this set is a closed set in $\textrm{Spec}(B)$ i.e. the set of prime ideals containing some ideal of $B$, intersected with $f^{*-1}(\textgoth{p})$.
+
+Note that all arrows of the combined diagram work on prime, not ordinary ideals.
+
+Our contained ideal is the surjection of some ideal $\textgoth{b}B_\textgoth{p}$ and the same is true for containing prime ideals, they are surjections of prime ideals of $B_\textgoth{p}$ containing $\textgoth{b}B_\textgoth{p}$.
+
+Now there is a fact: $\textgoth{b} \subseteq \textgoth{q} \iff \textgoth{b}B_\textgoth{p} \subseteq \textgoth{q}B_\textgoth{p}$: $\textgoth{b} \subseteq \textgoth{b}^{ec} \subseteq \textgoth{q}^{ec} = \textgoth{q}$. 
+
+The inclusion relations have moved from $\textrm{Spec}(B_\textgoth{p}/\textgoth{p}B_\textgoth{p})$ to $\textrm{Spec}(B)$ through $\psi^* \circ \rho^*$: 
+\[
+(\psi^* \circ \rho^*) (V(\textgoth{b}B\textgoth{p} + \textgoth{p}B_\textgoth{p})) 
+= \psi^*(V(\textgoth{b}B_\textgoth{p}))
+= V(\textgoth{b)}
+\]
+a closed set in $\textrm{Spec}(B)$. This set happens to be contained in $f^{*-1}(\textgoth{p})$ due to the bijection proven above.
+
+Now take a closed set in $f^{*-1}(\textgoth{p})$. It is the intersection of a closed set in $\textrm{Spec}(B)$ with the set $f^{*-1}(\textgoth{p})$ itself. A closed set in $\textrm{Spec}(B)$ is $V(\textgoth{b})$. $f^{*-1}(\textgoth{p})$ are prime ideals of $B$ such that $f^*(\textgoth{q}) = \textgoth{p}$ that is $f^{-1}(\textgoth{q}) = \textgoth{p}$. The intersection are prime ideals $\textgoth{q}$ of $B$ such that $f^{-1}(\textgoth{q}) = \textgoth{p}$ and $\textgoth{q} \supseteq \textgoth{p}$. We have already proved that they do not meet $f(A \setminus \textgoth{p})$, so they are all in $\psi^*(\textrm{Spec}(B_\textgoth{p})$. In $\textrm{Spec}(B_\textgoth{p})$ each of them is mapped to $\textgoth{q}B_\textgoth{p} \supseteq \textgoth{b}B_\textgoth{p}$; it is in $V(\textgoth{b}B_\textgoth{p})$. After surjection onto $B_\textgoth{p}/\textgoth{p}B_\textgoth{p}$, they all fall into $V$ of the surjection of $\textgoth{b}B_\textgoth{p}$
+\[
+\rho(V(\textgoth{b}B_\textgoth{p})) = V(\rho(\textgoth{b}B_\textgoth{p}))
+\]
 \end{document}
