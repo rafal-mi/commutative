@@ -3,6 +3,8 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{cd}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{yfonts}
@@ -10,9 +12,8 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{geometry}
-\usepackage{tikz-cd}
 \usepackage{stmaryrd}
-\usepackage{amsmath}
+\usepackage{subcaption}
 
 \geometry{
  a4paper,
@@ -31,6 +32,12 @@
 
 \urlstyle{same}
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\aaa}{\mf a}
+\newcommand{\bbb}{\mf b}
+\newcommand{\ppp}{\mf p}
+\newcommand{\qqq}{\mf q}
+\newcommand{\Spec}{\operatorname{Spec}}
 
 \title{Facts about Rings of Fractions}
 \author{Rafal Michalski}
@@ -493,7 +500,7 @@ element of $\textgoth{p}A_\textgoth{p}$ is $a/s$ where $a \in \textgoth{p}, s \n
 The composition then factors through $A_\textgoth{p} / \textgoth{p} A_\textgoth{p} \rightarrow B_\textgoth{q} / \textgoth{q} B_\textgoth{q}$: $a/s + \textgoth{p} A_\textgoth{p} \mapsto f(a)/f(s) + \textgoth{q} B_\textgoth{q}$. This is a ring homomorphism that makes $B_\textgoth{q} / \textgoth{q}_\textgoth{q}$ an $A_\textgoth{p} / \textgoth{p}_\textgoth{p}$-module.
 \qed
 
-\bigskip
+\bigskip98
 \begin{theorem}
 What is $\textgoth{p} M_\textgoth{p}$ ?
 \end{theorem}
@@ -744,8 +751,142 @@ If $\textgoth{p} \supseteq \textgoth{a}$ then $\textgoth{p} \supseteq \textgoth{
 \end{theorem}
 
 \noindent
-If $x \in (\textgoth{a}:s)$ then $xs \in \textgoth{a} \subseteq \textgoth{p}$ then $xs \in \textgoth{p}$ then $x \in \textgoth{p}$ or $s \in \textgoth{p}$ but $\textgoth{p} \cap S = \O$ so $x \in \textgoth{p}$. 
+If $x \in (\textgoth{a}:s)$ then $xs \in \textgoth{a} \subseteq \textgoth{p}$ then $xs \in \textgoth{p}$ then $x \in \textgoth{p}$ or $s \in \textgoth{p}$ but $\textgoth{p} \cap S = O$ so $x \in \textgoth{p}$. 
 \qed
+
+\begin{theorem}
+$S^{-1}(\aaa M) = S^{-1}\aaa S^{-1}M = \aaa S^{-1}M$
+\end{theorem}
+
+What is $S^{-1}(\aaa M)$ ? $\aaa M$ is a submodule of the $A$-module $M$ that is, it is an $A$-module. $S^{-1}(\aaa M)$. $S^{-1}(\aaa M)$ is the module of fractions, with respect to $S$. Its construction starts from $\aaa M \times S$. Its elements are $am/s$, with $a \in \aaa$, classes in the quotient of $\aaa M \times S$.
+
+What is $S^{-1}\aaa \cdot S^{-1}M$ ? $S^{-1}\aaa$ is the extension of $\aaa$ in $S^{-1}A$. Its elements are $a/s$ with $a \in \aaa$. $S^{-1}M$ is the module of fractions of $M$ with respect to $S$. Its elements are $m/s$. It is an $S^{-1}A$-module so we can multiply it by the ideal $S^{-1}\aaa$ of $S^{-1}A$. The elements of $S^{-1}\aaa \cdot S^{-1}M$ are $(a/s)(m/s')$ where $a \in \aaa$. Any element can be written as $am/s$ with $a \in \aaa$. But the construction of $S^{-1}M$ started from $M \times S$. Any $am/s$ is a class in the quotient of $M \times S$.
+
+What is $\aaa \cdot S^{-1}M$ ? $S^{-1}M$ is an $S^{-1}A$-module, but $\aaa$ is an ideal in $A$, not $S^{-1}A$. Still $S^{-1}M$ is also an $A$-module through the restriction of scalars
+\[
+A \overset{\phi}\rightarrow S^{-1}A
+\]
+\[
+a \mapsto a/1
+\]
+The scaling by an element of $A$ is
+\[
+a \cdot \frac{m}{s} = \phi(a) \cdot \frac{m}{s} = \frac{a}{1}\frac{m}{s} = \frac{am}{s}
+\]
+Now $\aaa \cdot S^{-1}M$ are $am/s$ with $a \in \aaa$. Any of them is a class in the quotient of $M \times S$.
+
+\begin{theorem}
+Case $S = A\setminus\ppp$
+\[
+(\aaa M)_\ppp = \aaa_\ppp M_\ppp = \aaa M_\ppp
+\]
+\end{theorem}
+\qed
+
+\begin{theorem}
+Case $\aaa = \ppp$
+\[
+\ppp M_\ppp = \ppp_\ppp M_\ppp = \ppp M_\ppp
+\]
+\end{theorem}
+\qed
+
+\begin{theorem}
+Case $M = A$
+\[
+\ppp_\ppp = \ppp_\ppp A_\ppp = \ppp A_\ppp
+\]
+\end{theorem}
+\qed
+
+\begin{theorem}
+For all $A$-linear map $g: M \rightarrow N$ from $M$ to an $S^{-1}$-module $N$ such that $sm = 0$ for some $s \in S$ and some $m \in M$ implies $g(m) = 0$, there is a unique $S^{-1}A$-linear map $h: S^{-1}M \rightarrow N$ such that $g = h \circ f$:
+\[
+     \begin{tikzcd}
+     M \arrow{r}{g} \arrow{d}{f} & N \\
+     S^{-1}M \arrow[dashrightarrow]{ur}{h}
+     \end{tikzcd}
+\]
+\end{theorem}
+\noindent
+What if $sm = 0$ but $g(m) \neq 0$?
+\[
+g(sm) = g(0) = 0 
+\]
+but 
+\[
+sg(m) = \frac{s}{1}g(m)
+\]
+(restriction of scalars!) is a nonzero vector scaled by a unit, which cannot be zero. The map becomes non-$A$-linear.
+
+\textit{Existence}. Let $h(m/s) = (1/s)g(m) = s^{-1}g(m)$. Then $h$ will clearly be an $A$-module isomorphism provided it is well-defined. Suppose that $m/s = m'/s'$; then there exists $t \in S$ such that $t(s'm - sm') = 0$; taking $g$ on this, $t(s'g(m) - sg(m')) = 0$; multiplying by $1/tss'$, we get $(1/s')g(m) = (1/s)g(m')$. Thus $h$ is well-defined and we get the existence proved.
+
+\textit{Uniqueness} If $h$ satisfies the condition then $h(m/1) = g(m)/1$ for all $m \in M$; hence, if $s \in S$, $h(m/s) = h((1/s)(m/s)) = (1/s)h(m/s) = (1/s)(g(m)/1) = g(m)/s$ so that $h$ is uniquely determined by $g$.
+\qed
+
+\vspace{8mm}
+
+This is the first time we encounter a module over a localized ring that is not itself a localization (in the same multipliset). But maybe it is? 
+By the restriction of scalars, $N$ is also an $A$-module with scaling
+\[
+an = \phi(a)n = \frac{a}{1}n
+\]
+What if we localize it at $S$? In $N \times S$, the relation is 
+\[
+(n, s) \sim (n', s') \iff \exists u \in S \; u(s'n - sn') = 0
+\]
+Under the quantifier there is
+\[
+\phi(u)(\phi(s')n - \phi(s)n') = 0 
+\]
+\[
+\frac{u}{1}(\frac{s'}{1}n - \frac{s}{1}n') = 0
+\]
+We can use the universal property after verification of $A$-linearity of the horizontal map $g$. On the left, $N$ is an $A$-module, on the right, it is an $S^{-1}A$-module.
+\[
+\begin{tikzcd}[column sep=large]
+N \arrow{r}{g} \arrow{d}[swap]{f} & N \\
+S^{-1}N \arrow{ur}[swap]{h}
+\end{tikzcd}
+%
+\qquad
+%
+\begin{tikzcd}[column sep=large]
+n \arrow[d, mapsto, swap, "f"] \arrow[r, mapsto, "g"] & n \\
+n/1\arrow[ur, mapsto, swap, "h"] 
+\end{tikzcd}
+\]
+If $sn = 0$ then in the restriction of scalars this means $(1/s)n = 0$ and since $1/s$ is a unit, $n = 0$, then $g(n) = 0$. Now we can use the universal property. The map $h$ on general element is
+\[
+n/s \mapsto \frac{1}{s}n
+\]
+We verify injectivity. Let
+\[
+\frac{1}{s}n = \frac{1}{s'}n'
+\]
+Multiplying by $ss'/1$
+\[
+\frac{s'}{1}n = \frac{s}{1}n'
+\]
+\[
+s'n = sn'
+\]
+in the $A$-module $N$. Then, in $S^{-1}N$,
+\[
+\frac{n}{s} = \frac{n'}{s'}
+\]
+and we have the injectivity proved. Clearly the map is surjective. Then it is an isomorphism
+\[
+S^{-1}N \cong N
+\]
+of $S^{-1}A$-modules. 
+
+\begin{theorem}
+Any module over a ring of fractions with respect to a multipliset, is a module of fractions with respect to this multipliset. 
+\end{theorem}
+\qed
+
+
 
 \section{Saturated}
 
