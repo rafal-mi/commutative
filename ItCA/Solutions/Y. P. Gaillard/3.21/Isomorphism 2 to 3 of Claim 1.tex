@@ -32,7 +32,14 @@
 }
 
 \urlstyle{same}
+
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\aaa}{\mf a}
+\newcommand{\bbb}{\mf b}
+\newcommand{\ppp}{\mf p}
+\newcommand{\qqq}{\mf q}
+\newcommand{\Spec}{\operatorname{Spec}}
 
 \newtheorem{theorem}{Step}
 
@@ -42,9 +49,10 @@
 
 \maketitle
 
-\textbf{Fact}. The isomorphisme 2 to 3.
+\textbf{Fact}. The isomorphism 2 to 3.
 \[
-  (B/\textgoth{p}B)_\textgoth{p} \cong B_\textgoth{p}B / \textgoth{p}_\textgoth{p} B_\textgoth{p}
+  (B/\textgoth{p}B)_\textgoth{p} \cong 
+  B_\textgoth{p} / \textgoth{p}_\textgoth{p} B_\textgoth{p}
 \]
 We know $\textgoth{p}_\textgoth{p} = \textgoth{p}A_\textgoth{p}$ is the single maximal ideal of $A_\textgoth{p}$. The map
 \[
@@ -129,5 +137,7 @@ vs'b - vsb' \in \textgoth{p}B
 vs'b - vsb' = \sum a_i'b_i'
 \]
 Take $v = us''$, $a_i' = a_i$, $b_i' = us'sb_i$. The inverse map is well-defined. The maps in both directions are obvious mutual inversions.
+
+$\Spec(B_\ppp/\ppp B_\ppp) = \Spec(k(\ppp) \otimes_A B)$ 
 
 \end{document}
