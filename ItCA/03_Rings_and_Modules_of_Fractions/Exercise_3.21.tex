@@ -28,6 +28,13 @@
     urlcolor=cyan,
 }
 
+\newcommand{\mf}{\mathfrak}
+\newcommand{\aaa}{\mf a}
+\newcommand{\bbb}{\mf b}
+\newcommand{\ppp}{\mf p}
+\newcommand{\qqq}{\mf q}
+\newcommand{\Spec}{\operatorname{Spec}}
+
 \urlstyle{same}
 %\newcommand{\goth}[1]{\text{\textgoth{#1}}
 
@@ -346,4 +353,96 @@ Now take a closed set in $f^{*-1}(\textgoth{p})$. It is the intersection of a cl
 \[
 \rho(V(\textgoth{b}B_\textgoth{p})) = V(\rho(\textgoth{b}B_\textgoth{p}))
 \]
+
+We move to the final isomorphism $B_\ppp/ \ppp B_\ppp \cong A_\ppp / \ppp A_\ppp$.
+
+The first way is by J. D. Taylor.
+\begin{align*}
+B/\ppp B_\ppp & \cong A_\ppp/\ppp A_\ppp \otimes_{A_\ppp} B_\ppp \\
+              & \cong A_\ppp/\ppp A_\ppp \otimes_{A_\ppp} A_\ppp \otimes_A B \\
+              & \cong A_\ppp/\ppp A_\ppp \otimes_A B
+\end{align*}
+The first isomorphism is an application of Exercise 2.2:i9i
+\[
+A/\aaa \otimes_A M \cong M/\aaa M
+\]
+to $M \coloneqq B_\ppp, A \coloneqq A_\ppp, \aaa \coloneqq \ppp A_\ppp $, then application of 
+$(\ppp A_\ppp)B_\ppp = \ppp B_\ppp$.
+
+\noindent
+The second isomprphism is an application of Proposition 3.5:
+\begin{align*} 
+S^{-1}A \otimes_A M & \cong S^{-1}M \\
+A_\ppp \otimes_A M & \cong M_\ppp \\
+A_\ppp \otimes_A B & \cong B_\ppp
+\end{align*} 
+
+The second way is inspired by Y. P. Gaillard.
+We take take the exact sequence
+\[
+0 \rightarrow \ppp A_\ppp \rightarrow A_\ppp \rightarrow A_\ppp/\ppp A_\ppp \rightarrow 0
+\]
+Then tensor it with $M$ over $A$. The sequence
+\[
+\ppp A_\ppp \otimes_A M \rightarrow A_\ppp \otimes_A M \rightarrow A_\ppp / \ppp A_\ppp \otimes_A M \rightarrow 0
+\]
+is exact. This sequence on elements
+\begin{alignat*}{2}
+\frac{a}{s} \otimes m 
+  & \mapsto  
+  & \frac{a}{s} \otimes m 
+  & \mapsto 
+    \left[ \frac{a}{s} \right] \otimes m \\
+&& \frac{a}{s} \otimes m  
+  & \mapsto 
+    \left[ \frac{a}{s} \right] \otimes m
+\end{alignat*}
+To its second module, we apply Proposition 3.5
+\begin{align*}
+A_\ppp \otimes_A M & \cong M_\ppp \\
+\frac{a}{s} \otimes m & \mapsto \frac{am}{s} \\
+\frac{1}{s} \otimes m & \mapsfrom \frac{m}{s}
+\end{align*}
+getting the third exact sequence
+\[
+\ppp A_\ppp \otimes_A M \rightarrow M_\ppp \rightarrow A_\ppp / \ppp A_\ppp \otimes_A M \rightarrow 0
+\]
+The first homomorphism of this sequence is
+\[
+\ppp A_\ppp \otimes_A M \rightarrow A_\ppp \otimes_A M \rightarrow M_\ppp
+\]
+\[
+\frac{a}{s}\otimes m \mapsto \frac{a}{s}\otimes m \mapsto \frac{am}{s} 
+\]
+The second isomorphism is
+\[
+M_\ppp \rightarrow A_\ppp \otimes_A M \rightarrow A_\ppp/\ppp A_\ppp \otimes_A M
+\]
+\[
+\frac{m}{s} \mapsto \frac{1}{s} \otimes m \mapsto \left[ \frac{1}{s} \right] \otimes m
+\]
+What is the image of $\ppp A_\ppp \otimes_A M$ in $M\_ppp$ in the third sequence? It is
+\[
+\Bigl\{ \frac{am}{s}: a \in \ppp, s \notin \ppp  \Bigr\} = \ppp M_\ppp
+\]
+Now we can state that
+\[
+M_\ppp/\ppp M_\ppp \cong A_\ppp/\ppp A_\ppp \otimes_A M
+\]
+\[
+\frac{m}{s} = \ppp M_\ppp \mapsto \left(\frac{1}{s} + \ppp A_\ppp \right) \otimes m
+\]
+What is the inverse? The general element of $A_\ppp/\ppp A_\ppp \otimes_A M$ 
+\[
+\left( \frac{a}{s} + \ppp A_\ppp \right) \otimes m = a \left( \frac{1}{s} + \ppp A_\ppp \right) \otimes m = \left( \frac{1}{s} + \ppp A_\ppp \right) \otimes am
+\]
+is the image of
+\[
+\frac{am}{s} + \ppp M_\ppp
+\]
+The corresponding element in $M_\ppp/\ppp M_\ppp$ is its preimage. The inverse map on elements is
+\[
+\left( \frac{a}{s} + \ppp A_\ppp \right) \otimes m \mapsto \frac{am}{s} + \ppp M_\ppp
+\]
 \end{document}
+
