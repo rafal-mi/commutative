@@ -902,6 +902,93 @@ is exact. As $(\ppp M)_\ppp = \ppp M_\ppp$, the sequence
 0 \rightarrow \ppp M_\ppp \rightarrow M_\ppp \rightarrow (M/\ppp M)_\ppp \rightarrow 0
 \]
 is exact, with ordinary inclusion on the second left.
+\qed
+
+\vspace{8mm}
+
+\begin{theorem}
+Exercise 2.2 of the Book
+\[
+A/\aaa \otimes_A M \cong M/\aaa M
+\]
+on elements.
+\end{theorem}
+The sequence 
+\[
+0 \rightarrow \aaa \rightarrow A \rightarrow A/\aaa \rightarrow 0
+\]
+\[
+a \mapsto a \mapsto a + \aaa
+\]
+is exact. We tensor it with $M$ over $A$
+\begin{alignat*}{6}
+\aaa \otimes_A M 
+  & \rightarrow 
+  & A \otimes_A M 
+  & \rightarrow 
+  & A/\aaa \otimes M     
+  & \rightarrow 
+  & 0 \\
+a \otimes m      
+  & \mapsto     
+  & a \otimes m   
+  & \mapsto     
+  & (a + \aaa) \otimes m 
+  & \mapsto 
+  & 0
+\end{alignat*}
+By the isomorphism
+\begin{align*}
+A \otimes_A M & \cong M \\
+a \otimes m & \mapsto am \\
+1 \otimes m & \mapsfrom m
+\end{align*}
+\begin{alignat*}{6}
+\aaa \otimes_A M 
+  & \rightarrow 
+  & M 
+  & \rightarrow 
+  & A/\aaa \otimes M     
+  & \rightarrow 
+  & 0 \\
+a \otimes m      
+  & \mapsto     
+  & am   
+  & \mapsto     
+  & (1 + \aaa) \otimes am 
+  & \mapsto 
+  & 0
+\end{alignat*}
+The image of the first homomorphism is precisely $\aaa M$, and we take quotient.
+\begin{align*}
+M/\aaa M & \cong A/\aaa \otimes_A M \\
+\overline{m} & \mapsto \overline{1} \otimes m \\
+\overline{am} & \mapsfrom \overline{a} \otimes m
+\end{align*}
+The inverse map has yet to be defined. Consider the map
+\begin{align*}
+A/\aaa \times M & \longrightarrow M/\aaa M \\
+(\overline{a}, m) & \longmapsto \overline{am}
+\end{align*}
+It is well-defined: if $\overline{a} = \overline{a'}$ then $a - a' \in \aaa$ then $(a - a')m \in \aaa M$ then $am - a'm \in \aaa M$ then $\overline{am} = \overline{a'm}$. It is clearly $A$-bilinear. Then it factors through $A/\aaa \otimes_A M$
+\[
+\begin{tikzcd}[column sep=large]
+A/\aaa \times M \arrow{r}{\otimes} \arrow{rd} & A/\aaa \otimes_A M \arrow{d} \\
+& M/\aaa M
+\end{tikzcd}
+%
+\qquad
+%
+\begin{tikzcd}[column sep=large]
+(\overline{a}, m) \arrow[r, mapsto, "\otimes"] \arrow{rd} & \overline{a} \otimes m \arrow[d, mapsto] \\
+& \overline{am}
+\end{tikzcd}
+\]
+
+
+\qed
+
+
 \section{Saturated}
 
 \begin{theorem}
