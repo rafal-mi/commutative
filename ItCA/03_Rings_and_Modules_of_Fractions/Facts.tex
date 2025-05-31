@@ -984,11 +984,80 @@ A/\aaa \times M \arrow{r}{\otimes} \arrow{rd} & A/\aaa \otimes_A M \arrow{d} \\
 & \overline{am}
 \end{tikzcd}
 \]
-
-
 \qed
 
+\begin{theorem}
+The inverse map in Proposition 3.5 of the Book is
+\begin{align*}
+S^{-1}M & \cong S^{-1}A \otimes_A M \\
+\frac{m}{s} & \mapsto  \frac{1}{s} \otimes m
+\end{align*}
+\end{theorem}
+We use the universal property
+\[
+\begin{tikzcd}
+M \arrow{r} \arrow{d} & S^{-1}A \otimes_A M \\
+S^{-1}M \arrow{ur}
+\end{tikzcd}
+\]
+Let's define the horizontal map as 
+\[
+m \longmapsto \frac{1}{1} \otimes m
+\]
+If $sm = 0$ for some $s \in S, m \in M$, then 
+\[
+\frac{1}{1} \otimes sm = 0; \quad s \cdot \frac{1}{1} \otimes m = 0; \quad \frac{s}{1} \otimes m = 0 
+\]
+multiplying by $1/s$,
+\[
+\frac{1}{s}\left(\frac{s}{1} \otimes m \right) = 0; \quad \frac{1}{s}\cdot\frac{s}{1} \otimes m = 0; \quad \frac{1}{1} \otimes m = 0
+\]
+The condition for $A$-bilinearity is fulfilled. Now the universal property defines the skew map as
+\[
+\frac{m}{s} \longmapsto \frac{1}{s} \cdot \left( \frac{1}{1} \otimes m \right) = \frac{1}{s} \otimes m
+\]
+\qed
 
+\begin{theorem}
+The inverse map in Proposition 3.7 of the Book is
+\begin{alignat*}{3}
+S^{-1}(M \otimes_A N) & \cong && S^{-1}M \otimes_{S^{-1}A} S^{-1}N \\
+\frac{m \otimes n}{s} & \longmapsto && \frac{m}{s} \otimes \frac{n}{1}
+\end{alignat*}
+\end{theorem}
+We use the universal property
+\[
+\begin{tikzcd}[column sep=large]
+M \otimes_A N \arrow{r} \arrow{d} & S^{-1}M \otimes_{S^{-1}A} S^{-1}N \\
+S^{-1}(M \otimes_A N) \arrow{ur}
+\end{tikzcd}
+%
+\qquad
+%
+\begin{tikzcd}[column sep=large]
+m \otimes n \arrow[r, mapsto] \arrow[d, mapsto] & \frac{m}{1} \otimes \frac{n}{1} \\
+\frac{m \otimes n}{1} \arrow[ur, mapsto]
+\end{tikzcd}
+\]
+which will determine the skew map as 
+\[
+\frac{m \otimes n}{s} \mapsto \frac{1}{s} \left( \frac{m}{1} \otimes \frac{n}{1} \right)
+\]
+But first the horizontal map must be defined.
+\[
+\begin{tikzcd}[column sep=large]
+M \times N \arrow{r}{\otimes} \arrow{rd} & M \otimes_A N \arrow{d} \\
+& S^{-1}M \otimes_{S^{-1}A} S^{-1}N
+\end{tikzcd}
+%
+\qquad
+%
+\begin{tikzcd}[column sep=large]
+(m, n) \arrow[r, mapsto, "\otimes"] \arrow{rd} & m \otimes n \arrow[d, mapsto] \\
+& \frac{m}{1} \otimes \frac{n}{1}
+\end{tikzcd}
+\]
+The whole bilinearity is easily verified, thus the map becomes well-defined. Also, mutual inverse is easily verified.
 \section{Saturated}
 
 \begin{theorem}
