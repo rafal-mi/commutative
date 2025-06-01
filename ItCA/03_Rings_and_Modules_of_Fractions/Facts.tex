@@ -754,6 +754,7 @@ If $\textgoth{p} \supseteq \textgoth{a}$ then $\textgoth{p} \supseteq \textgoth{
 If $x \in (\textgoth{a}:s)$ then $xs \in \textgoth{a} \subseteq \textgoth{p}$ then $xs \in \textgoth{p}$ then $x \in \textgoth{p}$ or $s \in \textgoth{p}$ but $\textgoth{p} \cap S = O$ so $x \in \textgoth{p}$. 
 \qed
 
+\vspace{1.5em}
 \begin{theorem}
 $S^{-1}(\aaa M) = S^{-1}\aaa S^{-1}M = \aaa S^{-1}M$
 \end{theorem}
@@ -775,6 +776,7 @@ a \cdot \frac{m}{s} = \phi(a) \cdot \frac{m}{s} = \frac{a}{1}\frac{m}{s} = \frac
 \]
 Now $\aaa \cdot S^{-1}M$ are $am/s$ with $a \in \aaa$. Any of them is a class in the quotient of $M \times S$.
 
+\vspace{1.5em}
 \begin{theorem}
 Case $S = A\setminus\ppp$
 \[
@@ -904,7 +906,16 @@ is exact. As $(\ppp M)_\ppp = \ppp M_\ppp$, the sequence
 is exact, with ordinary inclusion on the second left.
 \qed
 
-\vspace{8mm}
+\vspace{1.5em}
+\begin{theorem}
+\[
+A_\ppp / \ppp A_\ppp \otimes_A M \cong (A/\ppp)_\ppp \otimes_A M
+\]
+\end{theorem}
+Follows from the preceding Fact for $M \coloneqq A$.
+\qed
+
+\vspace{1.5em}
 
 \begin{theorem}
 Exercise 2.2 of the Book
@@ -1058,6 +1069,23 @@ M \times N \arrow{r}{\otimes} \arrow{rd} & M \otimes_A N \arrow{d} \\
 \end{tikzcd}
 \]
 The whole bilinearity is easily verified, thus the map becomes well-defined. Also, mutual inverse is easily verified.
+
+\begin{theorem}
+\[
+(M / \ppp M)_\ppp \cong A_\ppp \otimes_A M/\ppp M
+\]
+\end{theorem}
+Application of Proposition 3.5
+\begin{align*}
+S^{-1}M & \cong S^{-1}A \otimes_A M \\
+m/s & \mapsto 1/s \otimes m \\
+am/s & \mapsfrom a/s \otimes m 
+\end{align*}
+to $M \coloneqq M/\ppp M$ as an $A$-module. 
+\qed
+
+
+
 \section{Saturated}
 
 \begin{theorem}
